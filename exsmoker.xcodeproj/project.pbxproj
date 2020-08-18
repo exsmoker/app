@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3765A124EC386400A18955 /* Craving.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3765A024EC386400A18955 /* Craving.swift */; };
 		CE99B9D724EAD88500605799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99B9D624EAD88500605799 /* AppDelegate.swift */; };
 		CE99B9D924EAD88500605799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99B9D824EAD88500605799 /* SceneDelegate.swift */; };
 		CE99B9DB24EAD88500605799 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99B9DA24EAD88500605799 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3765A024EC386400A18955 /* Craving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Craving.swift; sourceTree = "<group>"; };
 		CE99B9D324EAD88500605799 /* exsmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exsmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE99B9D624EAD88500605799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE99B9D824EAD88500605799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +58,13 @@
 		CE99B9D524EAD88500605799 /* exsmoker */ = {
 			isa = PBXGroup;
 			children = (
+				CE99B9E424EAD88600605799 /* Info.plist */,
 				CE99B9D624EAD88500605799 /* AppDelegate.swift */,
-				CE99B9D824EAD88500605799 /* SceneDelegate.swift */,
 				CE99B9DA24EAD88500605799 /* ContentView.swift */,
+				CE3765A024EC386400A18955 /* Craving.swift */,
+				CE99B9D824EAD88500605799 /* SceneDelegate.swift */,
 				CE99B9DC24EAD88600605799 /* Assets.xcassets */,
 				CE99B9E124EAD88600605799 /* LaunchScreen.storyboard */,
-				CE99B9E424EAD88600605799 /* Info.plist */,
 				CE99B9DE24EAD88600605799 /* Preview Content */,
 			);
 			path = exsmoker;
@@ -148,6 +151,7 @@
 			files = (
 				CE99B9D724EAD88500605799 /* AppDelegate.swift in Sources */,
 				CE99B9D924EAD88500605799 /* SceneDelegate.swift in Sources */,
+				CE3765A124EC386400A18955 /* Craving.swift in Sources */,
 				CE99B9DB24EAD88500605799 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

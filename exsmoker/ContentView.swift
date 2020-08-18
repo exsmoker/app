@@ -1,21 +1,23 @@
-//
-//  ContentView.swift
-//  exsmoker
-//
-//  Created by vaux on 17.08.20.
-//  Copyright © 2020 exsmoker. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var panic = false
+    
     var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        NavigationView {
+            VStack {
+                Text("I have a craving")
+                Button(action: {
+                    self.panic = true
+                }) {
+                    Text("Now")
+                        .padding()
+                        .foregroundColor(.pink)
+                }.accentColor(.clear)
+                    .sheet(isPresented: $panic) {
+                        Craving()
+                }
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
