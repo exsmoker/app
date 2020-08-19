@@ -11,24 +11,48 @@ import SwiftUI
 struct Reasons: View {
     var body: some View {
         NavigationView {
-            List {
-                Section(header:
-                    VStack {
-                        Text("Reasons to resist")
-                            .font(.footnote)
-                        Button(action: {
-                            
-                        }) {
-                            Text("Any reason")
-                                .font(.headline)
-                                .foregroundColor(.pink)
-                                .padding()
-                        }.accentColor(.clear)
-                }) {
-                    Item(title: "", image: "")
+            GeometryReader { geo in
+                ScrollView {
+                    Text("Reasons to resist")
+                        .font(.footnote)
+                    Button(action: {
+                        
+                    }) {
+                        Text("Any reason")
+                            .font(.headline)
+                            .foregroundColor(.pink)
+                            .padding()
+                    }.accentColor(.clear)
+                    HStack {
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                    }
+                    HStack {
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                    }
+                    HStack {
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                    }
+                    HStack {
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Spacer()
+                    }
                 }
-            }.listStyle(GroupedListStyle())
-                .navigationBarTitle("Craving", displayMode: .large)
+            }.navigationBarTitle("Reasons", displayMode: .large)
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -36,8 +60,18 @@ struct Reasons: View {
 private struct Item: View {
     let title: String
     let image: String
+    let width: CGFloat
     
     var body: some View {
-        Image(image)
+        ZStack {
+            RoundedRectangle(cornerRadius: 12)
+                .frame(width: width, height: 180)
+                .foregroundColor(.init(.secondarySystemBackground))
+            VStack {
+                Image(image)
+                Text(title)
+                    .font(.subheadline)
+            }
+        }
     }
 }
