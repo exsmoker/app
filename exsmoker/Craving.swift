@@ -65,11 +65,12 @@ struct Craving: View {
                             .padding()
                             .foregroundColor(.pink)
                     }
-                }.sheet(isPresented: $reason) {
-                    Reasons()
                 }
             }.listStyle(GroupedListStyle())
                 .navigationBarTitle("Craving", displayMode: .large)
+                .sheet(isPresented: $reason) {
+                    Reasons()
+                }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

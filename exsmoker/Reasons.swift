@@ -99,7 +99,7 @@ struct Reasons: View {
                         Button(action: {
                             self.health = true
                         }) {
-                            Item(title: "Health", image: "", width: geo.size.width / 2.2)
+                            Item(title: "Health", image: "health", width: geo.size.width / 2.2)
                         }.accentColor(.clear)
                             .sheet(isPresented: self.$health) {
                                 Reason()
@@ -122,11 +122,12 @@ private struct Item: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: width, height: 200)
+                .frame(width: width, height: 220)
                 .foregroundColor(.init(.secondarySystemBackground))
                 .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
             VStack {
                 Image(image)
+                    .renderingMode(.original)
                 Text(title)
                     .font(.headline)
                     .foregroundColor(.secondary)
