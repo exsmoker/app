@@ -9,6 +9,14 @@
 import SwiftUI
 
 struct Reasons: View {
+    @State private var family = false
+    @State private var political = false
+    @State private var economical = false
+    @State private var finance = false
+    @State private var social = false
+    @State private var ecological = false
+    @State private var health = false
+    
     var body: some View {
         NavigationView {
             GeometryReader { geo in
@@ -25,30 +33,79 @@ struct Reasons: View {
                     }.accentColor(.clear)
                     HStack {
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.family = true
+                        }) {
+                            Item(title: "Family", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$family) {
+                                Reason()
+                        }
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.political = true
+                        }) {
+                            Item(title: "Political", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$political) {
+                                Reason()
+                        }
                         Spacer()
                     }
                     HStack {
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.economical = true
+                        }) {
+                            Item(title: "Economical", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$economical) {
+                                Reason()
+                        }
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.finance = true
+                        }) {
+                            Item(title: "Finance", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$finance) {
+                                Reason()
+                        }
                         Spacer()
                     }
                     HStack {
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.social = true
+                        }) {
+                            Item(title: "Social", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$social) {
+                                Reason()
+                        }
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.ecological = true
+                        }) {
+                            Item(title: "Ecological", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$ecological) {
+                                Reason()
+                        }
                         Spacer()
                     }
                     HStack {
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Button(action: {
+                            self.health = true
+                        }) {
+                            Item(title: "Health", image: "", width: geo.size.width / 2.2)
+                        }.accentColor(.clear)
+                            .sheet(isPresented: self.$health) {
+                                Reason()
+                        }
                         Spacer()
-                        Item(title: "", image: "", width: geo.size.width / 2.2)
+                        Item(title: "-", image: "", width: geo.size.width / 2.2)
                         Spacer()
                     }
                 }
@@ -64,13 +121,15 @@ private struct Item: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .frame(width: width, height: 180)
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: width, height: 200)
                 .foregroundColor(.init(.secondarySystemBackground))
+                .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
             VStack {
                 Image(image)
                 Text(title)
-                    .font(.subheadline)
+                    .font(.headline)
+                    .foregroundColor(.secondary)
             }
         }
     }
