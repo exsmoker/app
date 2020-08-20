@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE3765A124EC386400A18955 /* Craving.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3765A024EC386400A18955 /* Craving.swift */; };
 		CE6C69F524EE7EB6006DFC6C /* ReasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C69F424EE7EB6006DFC6C /* ReasonModel.swift */; };
+		CE6C69F724EE7F0E006DFC6C /* reasons.json in Resources */ = {isa = PBXBuildFile; fileRef = CE6C69F624EE7F0E006DFC6C /* reasons.json */; };
 		CE99610C24ED231D0017A4D3 /* Reasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99610B24ED231D0017A4D3 /* Reasons.swift */; };
 		CE99610E24ED31A10017A4D3 /* Reason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99610D24ED31A10017A4D3 /* Reason.swift */; };
 		CE99B9D724EAD88500605799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99B9D624EAD88500605799 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		CE3765A024EC386400A18955 /* Craving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Craving.swift; sourceTree = "<group>"; };
 		CE6C69F424EE7EB6006DFC6C /* ReasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonModel.swift; sourceTree = "<group>"; };
+		CE6C69F624EE7F0E006DFC6C /* reasons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reasons.json; sourceTree = "<group>"; };
 		CE99610B24ED231D0017A4D3 /* Reasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reasons.swift; sourceTree = "<group>"; };
 		CE99610D24ED31A10017A4D3 /* Reason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reason.swift; sourceTree = "<group>"; };
 		CE99B9D324EAD88500605799 /* exsmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exsmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				CE99B9DA24EAD88500605799 /* ContentView.swift */,
 				CE3765A024EC386400A18955 /* Craving.swift */,
 				CE99610B24ED231D0017A4D3 /* Reasons.swift */,
+				CE6C69F624EE7F0E006DFC6C /* reasons.json */,
 				CE6C69F424EE7EB6006DFC6C /* ReasonModel.swift */,
 				CE99610D24ED31A10017A4D3 /* Reason.swift */,
 				CE99B9D824EAD88500605799 /* SceneDelegate.swift */,
@@ -148,6 +151,7 @@
 				CE99B9E324EAD88600605799 /* LaunchScreen.storyboard in Resources */,
 				CE99B9E024EAD88600605799 /* Preview Assets.xcassets in Resources */,
 				CE99B9DD24EAD88600605799 /* Assets.xcassets in Resources */,
+				CE6C69F724EE7F0E006DFC6C /* reasons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

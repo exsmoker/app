@@ -16,6 +16,7 @@ struct Reasons: View {
     @State private var social = false
     @State private var ecological = false
     @State private var health = false
+    @State private var reasons = [ReasonModel]()
     
     var body: some View {
         NavigationView {
@@ -110,7 +111,9 @@ struct Reasons: View {
                     }
                 }
             }.navigationBarTitle("Reasons", displayMode: .large)
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }.navigationViewStyle(StackNavigationViewStyle()).onAppear {
+            self.reasons = try! JSONDecoder().decode([ReasonModel].self, from: Data(contentsOf: Bundle.main.url(forResource: "reasons", withExtension: "json")!))
+        }
     }
 }
 
