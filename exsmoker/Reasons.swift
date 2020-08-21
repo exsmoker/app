@@ -16,7 +16,7 @@ struct Reasons: View {
     @State private var social = false
     @State private var ecological = false
     @State private var health = false
-    @State private var reasons = [ReasonModel]()
+    @State private var reasons = [[ReasonModel]]()
     
     var body: some View {
         NavigationView {
@@ -32,17 +32,21 @@ struct Reasons: View {
                             .foregroundColor(.pink)
                             .padding()
                     }.accentColor(.clear)
-                    ForEach(self.reasons) { reason in
-                        Group {
+                    ForEach(self.reasons, id: \.self) { item in
+                        HStack {
                             Spacer()
-                            Item(title: reason.id, image: reason.image, width: geo.size.width / 2.2)
+                            Item(title: item.first!.id, image: item.first!.image, width: geo.size.width / 2.2)
+                            Spacer()
+                            Item(title: item.last!.id, image: item.last!.image, width: geo.size.width / 2.2)
+                            Spacer()
                         }
                     }
                 }
             }.navigationBarTitle("Reasons", displayMode: .large)
-        }.navigationViewStyle(StackNavigationViewStyle()).onAppear {
-            self.reasons = try! JSONDecoder().decode([ReasonModel].self, from: Data(contentsOf: Bundle.main.url(forResource: "reasons", withExtension: "json")!))
-        }
+            .onAppear {
+                    self.reasons = try! JSONDecoder().decode([[ReasonModel]].self, from: Data(contentsOf: Bundle.main.url(forResource: "reasons", withExtension: "json")!))
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
