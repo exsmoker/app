@@ -32,82 +32,11 @@ struct Reasons: View {
                             .foregroundColor(.pink)
                             .padding()
                     }.accentColor(.clear)
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.family = true
-                        }) {
-                            Item(title: "Family", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$family) {
-                                Reason()
+                    ForEach(self.reasons) { reason in
+                        Group {
+                            Spacer()
+                            Item(title: reason.id, image: reason.image, width: geo.size.width / 2.2)
                         }
-                        Spacer()
-                        Button(action: {
-                            self.political = true
-                        }) {
-                            Item(title: "Political", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$political) {
-                                Reason()
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.economical = true
-                        }) {
-                            Item(title: "Economical", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$economical) {
-                                Reason()
-                        }
-                        Spacer()
-                        Button(action: {
-                            self.finance = true
-                        }) {
-                            Item(title: "Finance", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$finance) {
-                                Reason()
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.social = true
-                        }) {
-                            Item(title: "Social", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$social) {
-                                Reason()
-                        }
-                        Spacer()
-                        Button(action: {
-                            self.ecological = true
-                        }) {
-                            Item(title: "Ecological", image: "", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$ecological) {
-                                Reason()
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.health = true
-                        }) {
-                            Item(title: "Health", image: "health", width: geo.size.width / 2.2)
-                        }.accentColor(.clear)
-                            .sheet(isPresented: self.$health) {
-                                Reason()
-                        }
-                        Spacer()
-                        Item(title: "-", image: "", width: geo.size.width / 2.2)
-                        Spacer()
                     }
                 }
             }.navigationBarTitle("Reasons", displayMode: .large)
