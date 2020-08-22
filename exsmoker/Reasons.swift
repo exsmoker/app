@@ -36,17 +36,17 @@ struct Reasons: View {
                     ForEach(self.reasons, id: \.self) { item in
                         HStack {
                             Spacer()
-                            Item(reason: item.first!, width: geo.size.width / 2.2) {
+                            Item(reason: item.first!, width: geo.size.width / 2.4) {
                                 self.reason = item.first
                             }
                             Spacer()
                             if item.count == 2 {
-                                Item(reason: item.last!, width: geo.size.width / 2.2) {
+                                Item(reason: item.last!, width: geo.size.width / 2.4) {
                                     self.reason = item.last
                                 }
                                 Spacer()
                             }
-                        }
+                        }.padding(.vertical, 6)
                     }
                 }
             }.navigationBarTitle("Reasons", displayMode: .large)
@@ -77,10 +77,13 @@ private struct Item: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundColor(.init(.secondarySystemBackground))
-                    .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
+                    .shadow(color: .init(.quaternaryLabel), radius: 5, x: 1, y: 1)
                 VStack {
                     Image(reason.image)
                         .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .padding(.bottom)
                     HStack {
                         Text(.init(reason.title))
                             .font(.footnote)
@@ -96,7 +99,7 @@ private struct Item: View {
                         Spacer()
                     }
                 }
-            }.frame(width: width, height: 240)
+            }.frame(width: width, height: 180)
         }.accentColor(.clear)
     }
 }
