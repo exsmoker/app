@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE0E6A8024F1397D007A9072"
-               BuildableName = "watchOS.app"
+               BuildableName = "ExSmoker.app"
                BlueprintName = "watchOS"
                ReferencedContainer = "container:ExSmoker.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE0E6A6E24F13967007A9072"
-               BuildableName = "iOS.app"
+               BuildableName = "ExSmoker.app"
                BlueprintName = "iOS"
                ReferencedContainer = "container:ExSmoker.xcodeproj">
             </BuildableReference>

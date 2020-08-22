@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0E6A7324F13967007A9072 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* iOSApp.swift */; };
-		CE0E6A7524F13967007A9072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7424F13967007A9072 /* ContentView.swift */; };
+		CE0E6A7324F13967007A9072 /* ExSmoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* ExSmoker.swift */; };
+		CE0E6A7524F13967007A9072 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7424F13967007A9072 /* Main.swift */; };
 		CE0E6A7724F13967007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A7624F13967007A9072 /* Assets.xcassets */; };
 		CE0E6A8424F1397E007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A8324F1397E007A9072 /* Assets.xcassets */; };
 		CE0E6A8B24F1397E007A9072 /* ExSmoker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -72,8 +72,8 @@
 
 /* Begin PBXFileReference section */
 		CE0E6A6F24F13967007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE0E6A7224F13967007A9072 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		CE0E6A7424F13967007A9072 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0E6A7224F13967007A9072 /* ExSmoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSmoker.swift; sourceTree = "<group>"; };
+		CE0E6A7424F13967007A9072 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		CE0E6A7624F13967007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0E6A7B24F13967007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0E6A8124F1397D007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,10 +135,10 @@
 		CE0E6A7124F13967007A9072 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE0E6A7224F13967007A9072 /* iOSApp.swift */,
-				CE0E6A7424F13967007A9072 /* ContentView.swift */,
-				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
 				CE0E6A7B24F13967007A9072 /* Info.plist */,
+				CE0E6A7224F13967007A9072 /* ExSmoker.swift */,
+				CE0E6A7424F13967007A9072 /* Main.swift */,
+				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -365,8 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0E6A7524F13967007A9072 /* ContentView.swift in Sources */,
-				CE0E6A7324F13967007A9072 /* iOSApp.swift in Sources */,
+				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,
+				CE0E6A7324F13967007A9072 /* ExSmoker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
