@@ -12,6 +12,10 @@ enum Reason: CaseIterable {
         "Reason.title.\(self)"
     }
     
+    var subtitle: String {
+        "Reason.subtitle.\(self)"
+    }
+    
     var description: String {
         "Reason.description.\(self)"
     }

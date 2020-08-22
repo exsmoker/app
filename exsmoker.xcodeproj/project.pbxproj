@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE3765A124EC386400A18955 /* Craving.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3765A024EC386400A18955 /* Craving.swift */; };
+		CE4FB94B24F10EC7001ED08C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4FB94924F10EC7001ED08C /* Localizable.strings */; };
 		CE6C69F524EE7EB6006DFC6C /* Reason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C69F424EE7EB6006DFC6C /* Reason.swift */; };
 		CE99610C24ED231D0017A4D3 /* Reasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99610B24ED231D0017A4D3 /* Reasons.swift */; };
 		CE99610E24ED31A10017A4D3 /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99610D24ED31A10017A4D3 /* ReasonView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		CE3765A024EC386400A18955 /* Craving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Craving.swift; sourceTree = "<group>"; };
+		CE4FB94A24F10EC7001ED08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE6C69F424EE7EB6006DFC6C /* Reason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reason.swift; sourceTree = "<group>"; };
 		CE99610B24ED231D0017A4D3 /* Reasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reasons.swift; sourceTree = "<group>"; };
 		CE99610D24ED31A10017A4D3 /* ReasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				CE99B9DC24EAD88600605799 /* Assets.xcassets */,
 				CE99B9E124EAD88600605799 /* LaunchScreen.storyboard */,
 				CE99B9DE24EAD88600605799 /* Preview Content */,
+				CE4FB94924F10EC7001ED08C /* Localizable.strings */,
 			);
 			path = exsmoker;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE99B9E324EAD88600605799 /* LaunchScreen.storyboard in Resources */,
+				CE4FB94B24F10EC7001ED08C /* Localizable.strings in Resources */,
 				CE99B9E024EAD88600605799 /* Preview Assets.xcassets in Resources */,
 				CE99B9DD24EAD88600605799 /* Assets.xcassets in Resources */,
 			);
@@ -171,6 +175,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CE4FB94924F10EC7001ED08C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4FB94A24F10EC7001ED08C /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CE99B9E124EAD88600605799 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -66,17 +66,27 @@ private struct Item: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: width, height: 220)
+            RoundedRectangle(cornerRadius: 12)
                 .foregroundColor(.init(.secondarySystemBackground))
                 .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
             VStack {
                 Image(reason.image)
                     .renderingMode(.original)
-                Text(reason.title)
-                    .font(.headline)
-                    .foregroundColor(.secondary)
+                HStack {
+                    Text(.init(reason.title))
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                        .padding(.leading)
+                    Spacer()
+                }
+                HStack {
+                    Text(.init(reason.subtitle))
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                        .padding(.leading)
+                    Spacer()
+                }
             }
-        }
+        }.frame(width: width, height: 240)
     }
 }
