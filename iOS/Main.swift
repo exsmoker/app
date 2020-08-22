@@ -3,21 +3,21 @@ import SwiftUI
 struct Main: View {
     var body: some View {
         TabView {
-            Circle()
+            Home()
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "house.fill")
                 }
             Circle()
                 .tabItem {
-                    Image(systemName: "chart.bar")
+                    Image(systemName: "chart.bar.fill")
                 }
             Circle()
                 .tabItem {
-                    Image(systemName: "chart.pie")
+                    Image(systemName: "chart.pie.fill")
                 }
             Circle()
                 .tabItem {
-                    Image(systemName: "star")
+                    Image(systemName: "star.fill")
                 }
             Circle()
                 .tabItem {
