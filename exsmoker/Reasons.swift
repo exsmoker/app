@@ -17,6 +17,7 @@ struct Reasons: View {
     @State private var ecological = false
     @State private var health = false
     @State private var reasons = [[Reason]]()
+    @State private var reason: Reason?
     
     var body: some View {
         NavigationView {
@@ -35,10 +36,14 @@ struct Reasons: View {
                     ForEach(self.reasons, id: \.self) { item in
                         HStack {
                             Spacer()
-                            Item(reason: item.first!, width: geo.size.width / 2.2)
+                            Item(reason: item.first!, width: geo.size.width / 2.2) {
+                                self.reason = item.first
+                            }
                             Spacer()
                             if item.count == 2 {
-                                Item(reason: item.last!, width: geo.size.width / 2.2)
+                                Item(reason: item.last!, width: geo.size.width / 2.2) {
+                                    self.reason = item.last
+                                }
                                 Spacer()
                             }
                         }
@@ -55,6 +60,8 @@ struct Reasons: View {
                             return item
                         } ($1))
                     }
+            }.sheet(item: $reason) {
+                ReasonView(reason: $0)
             }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
@@ -63,30 +70,33 @@ struct Reasons: View {
 private struct Item: View {
     let reason: Reason
     let width: CGFloat
+    let action: () -> Void
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .foregroundColor(.init(.secondarySystemBackground))
-                .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
-            VStack {
-                Image(reason.image)
-                    .renderingMode(.original)
-                HStack {
-                    Text(.init(reason.title))
-                        .font(.footnote)
-                        .foregroundColor(.secondary)
-                        .padding(.leading)
-                    Spacer()
+        Button(action: action) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundColor(.init(.secondarySystemBackground))
+                    .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
+                VStack {
+                    Image(reason.image)
+                        .renderingMode(.original)
+                    HStack {
+                        Text(.init(reason.title))
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .padding(.leading)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(.init(reason.subtitle))
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                            .padding(.leading)
+                        Spacer()
+                    }
                 }
-                HStack {
-                    Text(.init(reason.subtitle))
-                        .font(.headline)
-                        .foregroundColor(.secondary)
-                        .padding(.leading)
-                    Spacer()
-                }
-            }
-        }.frame(width: width, height: 240)
+            }.frame(width: width, height: 240)
+        }.accentColor(.clear)
     }
 }

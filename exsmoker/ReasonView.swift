@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct ReasonView: View {
+    let reason: Reason
+    
     var body: some View {
-        Circle()
+        Image(reason.image)
     }
 }
