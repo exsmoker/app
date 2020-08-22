@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Core",
+        "repositoryURL": "https://github.com/exsmoker/core.git",
+        "state": {
+          "branch": "main",
+          "revision": "fba604a0aaaab3ef148fd7ed21239e63ecbeb50c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
