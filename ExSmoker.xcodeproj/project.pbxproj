@@ -23,6 +23,13 @@
 		CE0E6ABC24F13A36007A9072 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E6ABB24F13A36007A9072 /* Core */; };
 		CE0E6ABF24F13A5D007A9072 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E6ABE24F13A5D007A9072 /* Balam */; };
 		CE25A8C024F14EA9008488F6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25A8BF24F14EA9008488F6 /* Home.swift */; };
+		CE25A8C224F1568D008488F6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25A8C124F1568D008488F6 /* Session.swift */; };
+		CE25A8C324F1568D008488F6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25A8C124F1568D008488F6 /* Session.swift */; };
+		CE25A8C424F1568D008488F6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25A8C124F1568D008488F6 /* Session.swift */; };
+		CE25A8C724F156FF008488F6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8C624F156FF008488F6 /* Core */; };
+		CE25A8C924F156FF008488F6 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8C824F156FF008488F6 /* Balam */; };
+		CE25A8CB24F15709008488F6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8CA24F15709008488F6 /* Core */; };
+		CE25A8CD24F15709008488F6 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8CC24F15709008488F6 /* Balam */; };
 		CE61839F24F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
@@ -93,6 +100,7 @@
 		CE0E6AB524F139CA007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0E6AB624F139CA007A9072 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		CE25A8BF24F14EA9008488F6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CE25A8C124F1568D008488F6 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE25A8C924F156FF008488F6 /* Balam in Frameworks */,
+				CE25A8C724F156FF008488F6 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE25A8CD24F15709008488F6 /* Balam in Frameworks */,
+				CE25A8CB24F15709008488F6 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,9 +191,17 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		CE25A8C524F156FF008488F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE61839D24F13B4F00BDC132 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CE25A8C124F1568D008488F6 /* Session.swift */,
 				CE61839E24F13B7400BDC132 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -196,6 +216,7 @@
 				CE61839D24F13B4F00BDC132 /* Shared */,
 				CE0E6A8224F1397D007A9072 /* watchOS */,
 				CE0E6A8E24F1397E007A9072 /* watchOS Extension */,
+				CE25A8C524F156FF008488F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +276,10 @@
 			dependencies = (
 			);
 			name = "watchOS Extension";
+			packageProductDependencies = (
+				CE25A8C624F156FF008488F6 /* Core */,
+				CE25A8C824F156FF008488F6 /* Balam */,
+			);
 			productName = "watchOS Extension";
 			productReference = CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -272,6 +297,10 @@
 			dependencies = (
 			);
 			name = macOS;
+			packageProductDependencies = (
+				CE25A8CA24F15709008488F6 /* Core */,
+				CE25A8CC24F15709008488F6 /* Balam */,
+			);
 			productName = macOS;
 			productReference = CE0E6AAA24F139CA007A9072 /* ExSmoker.app */;
 			productType = "com.apple.product-type.application";
@@ -369,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,
+				CE25A8C224F1568D008488F6 /* Session.swift in Sources */,
 				CE25A8C024F14EA9008488F6 /* Home.swift in Sources */,
 				CE0E6A7324F13967007A9072 /* App.swift in Sources */,
 			);
@@ -379,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E6A9024F1397E007A9072 /* ContentView.swift in Sources */,
+				CE25A8C324F1568D008488F6 /* Session.swift in Sources */,
 				CE0E6A9224F1397E007A9072 /* ExSmokerApp.swift in Sources */,
 				CE0E6A9424F1397E007A9072 /* ComplicationController.swift in Sources */,
 			);
@@ -389,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E6AAF24F139CA007A9072 /* ContentView.swift in Sources */,
+				CE25A8C424F1568D008488F6 /* Session.swift in Sources */,
 				CE0E6AAD24F139CA007A9072 /* macOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1029,6 +1061,26 @@
 			productName = Core;
 		};
 		CE0E6ABE24F13A5D007A9072 /* Balam */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */;
+			productName = Balam;
+		};
+		CE25A8C624F156FF008488F6 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E6ABA24F13A36007A9072 /* XCRemoteSwiftPackageReference "core" */;
+			productName = Core;
+		};
+		CE25A8C824F156FF008488F6 /* Balam */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */;
+			productName = Balam;
+		};
+		CE25A8CA24F15709008488F6 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E6ABA24F13A36007A9072 /* XCRemoteSwiftPackageReference "core" */;
+			productName = Core;
+		};
+		CE25A8CC24F15709008488F6 /* Balam */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */;
 			productName = Balam;

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct Home: View {
+    @EnvironmentObject var session: Session
+    
     var body: some View {
         ScrollView {
             Profile()
@@ -9,6 +11,8 @@ struct Home: View {
 }
 
 private struct Profile: View {
+    @EnvironmentObject var session: Session
+    
     var body: some View {
         VStack {
             ZStack {
@@ -21,11 +25,11 @@ private struct Profile: View {
                     .font(.largeTitle)
                     .foregroundColor(.accentColor)
             }.padding(.top, 50)
-            Text(verbatim: "John Appleseed")
+            Text(verbatim: session.user.name)
                 .bold()
                 .foregroundColor(.primary)
                 .padding(.top)
-            Text(verbatim: "Joined 14.04.20")
+            Text(verbatim: session.user.location)
                 .font(.footnote)
                 .foregroundColor(.secondary)
         }

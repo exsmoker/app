@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct Main: View {
+    @EnvironmentObject var session: Session
+    
     var body: some View {
         TabView {
             Home()
