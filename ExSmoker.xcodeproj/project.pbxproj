@@ -7,59 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE28B02C24F12E6600BCB558 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE28B02B24F12E6600BCB558 /* Core */; };
-		CE7DA45F24F136DF006F9849 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA45E24F136DF006F9849 /* Info.plist */; };
-		CE7DA46324F136EA006F9849 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA46224F136EA006F9849 /* Info.plist */; };
-		CE7DA46824F13702006F9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA46524F13702006F9849 /* Assets.xcassets */; };
-		CE7DA46924F13702006F9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA46524F13702006F9849 /* Assets.xcassets */; };
-		CE7DA46A24F13702006F9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA46524F13702006F9849 /* Assets.xcassets */; };
-		CE7DA47424F1370F006F9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA47224F1370F006F9849 /* Assets.xcassets */; };
-		CE7DA47524F1370F006F9849 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA47324F1370F006F9849 /* Info.plist */; };
-		CE7DA47F24F13719006F9849 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA47724F13719006F9849 /* PushNotificationPayload.apns */; };
-		CE7DA48024F13719006F9849 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA47824F13719006F9849 /* ComplicationController.swift */; };
-		CE7DA48124F13719006F9849 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA47924F13719006F9849 /* NotificationController.swift */; };
-		CE7DA48224F13719006F9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA47A24F13719006F9849 /* Assets.xcassets */; };
-		CE7DA48324F13719006F9849 /* ExSmokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA47B24F13719006F9849 /* ExSmokerApp.swift */; };
-		CE7DA48424F13719006F9849 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA47C24F13719006F9849 /* NotificationView.swift */; };
-		CE7DA48524F13719006F9849 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA47D24F13719006F9849 /* ContentView.swift */; };
-		CE7DA48624F13719006F9849 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DA47E24F13719006F9849 /* Info.plist */; };
-		CE7DA48824F1375B006F9849 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DA48724F1375B006F9849 /* App.swift */; };
+		CE0E6A7324F13967007A9072 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* iOSApp.swift */; };
+		CE0E6A7524F13967007A9072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7424F13967007A9072 /* ContentView.swift */; };
+		CE0E6A7724F13967007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A7624F13967007A9072 /* Assets.xcassets */; };
+		CE0E6A8424F1397E007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A8324F1397E007A9072 /* Assets.xcassets */; };
+		CE0E6A8B24F1397E007A9072 /* ExSmoker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE0E6A9024F1397E007A9072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A8F24F1397E007A9072 /* ContentView.swift */; };
+		CE0E6A9224F1397E007A9072 /* ExSmokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A9124F1397E007A9072 /* ExSmokerApp.swift */; };
+		CE0E6A9424F1397E007A9072 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A9324F1397E007A9072 /* ComplicationController.swift */; };
+		CE0E6A9624F1397E007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A9524F1397E007A9072 /* Assets.xcassets */; };
+		CE0E6A9D24F1397E007A9072 /* ExSmoker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE0E6A8124F1397D007A9072 /* ExSmoker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE0E6AAD24F139CA007A9072 /* macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6AAC24F139CA007A9072 /* macOSApp.swift */; };
+		CE0E6AAF24F139CA007A9072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6AAE24F139CA007A9072 /* ContentView.swift */; };
+		CE0E6AB124F139CA007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6AB024F139CA007A9072 /* Assets.xcassets */; };
+		CE0E6ABC24F13A36007A9072 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E6ABB24F13A36007A9072 /* Core */; };
+		CE0E6ABF24F13A5D007A9072 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E6ABE24F13A5D007A9072 /* Balam */; };
+		CE61839F24F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
+		CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
+		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
+		CE6183A224F13F0A00BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE28B00B24F12D8500BCB558 /* PBXContainerItemProxy */ = {
+		CE0E6A8C24F1397E007A9072 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE28AFD824F128F200BCB558 /* Project object */;
+			containerPortal = CEF8385324F13926005AA2D8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE28B00824F12D8500BCB558;
-			remoteInfo = "ExSmoker (watchOS) Extension";
+			remoteGlobalIDString = CE0E6A8924F1397E007A9072;
+			remoteInfo = "watchOS Extension";
 		};
-		CE28B01F24F12D8600BCB558 /* PBXContainerItemProxy */ = {
+		CE0E6A9B24F1397E007A9072 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE28AFD824F128F200BCB558 /* Project object */;
+			containerPortal = CEF8385324F13926005AA2D8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE28AFFF24F12D8500BCB558;
-			remoteInfo = "ExSmoker (watchOS)";
+			remoteGlobalIDString = CE0E6A8024F1397D007A9072;
+			remoteInfo = watchOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE28B02524F12D8600BCB558 /* Embed App Extensions */ = {
+		CE0E6AA124F1397E007A9072 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				CE0E6A8B24F1397E007A9072 /* ExSmoker.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28B02924F12D8600BCB558 /* Embed Watch Content */ = {
+		CE0E6AA524F1397E007A9072 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				CE0E6A9D24F1397E007A9072 /* ExSmoker.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,47 +71,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE28AFE424F128F200BCB558 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ExSmoker.app; path = "/Users/vaux/dev/ExSmoker-App/build/Debug-iphoneos/ExSmoker.app"; sourceTree = "<absolute>"; };
-		CE28AFEC24F128F200BCB558 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ExSmoker.app; path = "/Users/vaux/dev/ExSmoker-App/build/Debug/ExSmoker.app"; sourceTree = "<absolute>"; };
-		CE7DA45A24F136B9006F9849 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CE7DA45B24F136C4006F9849 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		CE7DA45C24F136C4006F9849 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CE7DA45E24F136DF006F9849 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7DA46124F136EA006F9849 /* macOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		CE7DA46224F136EA006F9849 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7DA46524F13702006F9849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE7DA47224F1370F006F9849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE7DA47324F1370F006F9849 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7DA47724F13719006F9849 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		CE7DA47824F13719006F9849 /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		CE7DA47924F13719006F9849 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		CE7DA47A24F13719006F9849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE7DA47B24F13719006F9849 /* ExSmokerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSmokerApp.swift; sourceTree = "<group>"; };
-		CE7DA47C24F13719006F9849 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		CE7DA47D24F13719006F9849 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE7DA47E24F13719006F9849 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7DA48724F1375B006F9849 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		CE7DA48924F137B9006F9849 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE7DA48A24F137C2006F9849 /* ExSmoker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExSmoker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E6A6F24F13967007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E6A7224F13967007A9072 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		CE0E6A7424F13967007A9072 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0E6A7624F13967007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0E6A7B24F13967007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0E6A8124F1397D007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E6A8324F1397E007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0E6A8524F1397E007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExSmoker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E6A8F24F1397E007A9072 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0E6A9124F1397E007A9072 /* ExSmokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSmokerApp.swift; sourceTree = "<group>"; };
+		CE0E6A9324F1397E007A9072 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		CE0E6A9524F1397E007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0E6A9A24F1397E007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0E6AAA24F139CA007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E6AAC24F139CA007A9072 /* macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSApp.swift; sourceTree = "<group>"; };
+		CE0E6AAE24F139CA007A9072 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0E6AB024F139CA007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0E6AB524F139CA007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0E6AB624F139CA007A9072 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE28AFE124F128F200BCB558 /* Frameworks */ = {
+		CE0E6A6C24F13967007A9072 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE28B02C24F12E6600BCB558 /* Core in Frameworks */,
+				CE0E6ABF24F13A5D007A9072 /* Balam in Frameworks */,
+				CE0E6ABC24F13A36007A9072 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28AFE924F128F200BCB558 /* Frameworks */ = {
+		CE0E6A8724F1397E007A9072 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28B00624F12D8500BCB558 /* Frameworks */ = {
+		CE0E6AA724F139CA007A9072 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,172 +121,182 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE28AFD724F128F200BCB558 = {
+		CE0E6A7024F13967007A9072 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE7DA45A24F136B9006F9849 /* .gitignore */,
-				CE7DA45B24F136C4006F9849 /* LICENSE */,
-				CE7DA45C24F136C4006F9849 /* README.md */,
-				CE7DA45D24F136DF006F9849 /* iOS */,
-				CE7DA46024F136EA006F9849 /* macOS */,
-				CE7DA46424F13702006F9849 /* Shared */,
-				CE7DA47124F1370F006F9849 /* watchOS */,
-				CE7DA47624F13719006F9849 /* watchOS Extension */,
-				CE7DA48924F137B9006F9849 /* ExSmoker.app */,
-				CE7DA48A24F137C2006F9849 /* ExSmoker.appex */,
+				CE0E6A6F24F13967007A9072 /* ExSmoker.app */,
+				CE0E6A8124F1397D007A9072 /* ExSmoker.app */,
+				CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */,
+				CE0E6AAA24F139CA007A9072 /* ExSmoker.app */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		CE7DA45D24F136DF006F9849 /* iOS */ = {
+		CE0E6A7124F13967007A9072 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE7DA45E24F136DF006F9849 /* Info.plist */,
-				CE7DA48724F1375B006F9849 /* App.swift */,
+				CE0E6A7224F13967007A9072 /* iOSApp.swift */,
+				CE0E6A7424F13967007A9072 /* ContentView.swift */,
+				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
+				CE0E6A7B24F13967007A9072 /* Info.plist */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		CE7DA46024F136EA006F9849 /* macOS */ = {
+		CE0E6A8224F1397D007A9072 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE7DA46124F136EA006F9849 /* macOS.entitlements */,
-				CE7DA46224F136EA006F9849 /* Info.plist */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		CE7DA46424F13702006F9849 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				CE7DA46524F13702006F9849 /* Assets.xcassets */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		CE7DA47124F1370F006F9849 /* watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				CE7DA47224F1370F006F9849 /* Assets.xcassets */,
-				CE7DA47324F1370F006F9849 /* Info.plist */,
+				CE0E6A8324F1397E007A9072 /* Assets.xcassets */,
+				CE0E6A8524F1397E007A9072 /* Info.plist */,
 			);
 			path = watchOS;
 			sourceTree = "<group>";
 		};
-		CE7DA47624F13719006F9849 /* watchOS Extension */ = {
+		CE0E6A8E24F1397E007A9072 /* watchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE7DA47724F13719006F9849 /* PushNotificationPayload.apns */,
-				CE7DA47824F13719006F9849 /* ComplicationController.swift */,
-				CE7DA47924F13719006F9849 /* NotificationController.swift */,
-				CE7DA47A24F13719006F9849 /* Assets.xcassets */,
-				CE7DA47B24F13719006F9849 /* ExSmokerApp.swift */,
-				CE7DA47C24F13719006F9849 /* NotificationView.swift */,
-				CE7DA47D24F13719006F9849 /* ContentView.swift */,
-				CE7DA47E24F13719006F9849 /* Info.plist */,
+				CE0E6A8F24F1397E007A9072 /* ContentView.swift */,
+				CE0E6A9124F1397E007A9072 /* ExSmokerApp.swift */,
+				CE0E6A9324F1397E007A9072 /* ComplicationController.swift */,
+				CE0E6A9524F1397E007A9072 /* Assets.xcassets */,
+				CE0E6A9A24F1397E007A9072 /* Info.plist */,
 			);
 			path = "watchOS Extension";
+			sourceTree = "<group>";
+		};
+		CE0E6AAB24F139CA007A9072 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E6AAC24F139CA007A9072 /* macOSApp.swift */,
+				CE0E6AAE24F139CA007A9072 /* ContentView.swift */,
+				CE0E6AB024F139CA007A9072 /* Assets.xcassets */,
+				CE0E6AB524F139CA007A9072 /* Info.plist */,
+				CE0E6AB624F139CA007A9072 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CE61839D24F13B4F00BDC132 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE61839E24F13B7400BDC132 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CEF8385224F13926005AA2D8 = {
+			isa = PBXGroup;
+			children = (
+				CE0E6A7124F13967007A9072 /* iOS */,
+				CE0E6AAB24F139CA007A9072 /* macOS */,
+				CE0E6A7024F13967007A9072 /* Products */,
+				CE61839D24F13B4F00BDC132 /* Shared */,
+				CE0E6A8224F1397D007A9072 /* watchOS */,
+				CE0E6A8E24F1397E007A9072 /* watchOS Extension */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE28AFE324F128F200BCB558 /* ExSmoker (iOS) */ = {
+		CE0E6A6E24F13967007A9072 /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE28AFF824F128F200BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (iOS)" */;
+			buildConfigurationList = CE0E6A7E24F13967007A9072 /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
-				CE28AFE024F128F200BCB558 /* Sources */,
-				CE28AFE124F128F200BCB558 /* Frameworks */,
-				CE28AFE224F128F200BCB558 /* Resources */,
-				CE28B02924F12D8600BCB558 /* Embed Watch Content */,
+				CE0E6A6B24F13967007A9072 /* Sources */,
+				CE0E6A6C24F13967007A9072 /* Frameworks */,
+				CE0E6A6D24F13967007A9072 /* Resources */,
+				CE0E6AA524F1397E007A9072 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE28B02024F12D8600BCB558 /* PBXTargetDependency */,
+				CE0E6A9C24F1397E007A9072 /* PBXTargetDependency */,
 			);
-			name = "ExSmoker (iOS)";
+			name = iOS;
 			packageProductDependencies = (
-				CE28B02B24F12E6600BCB558 /* Core */,
+				CE0E6ABB24F13A36007A9072 /* Core */,
+				CE0E6ABE24F13A5D007A9072 /* Balam */,
 			);
-			productName = "ExSmoker (iOS)";
-			productReference = CE28AFE424F128F200BCB558 /* ExSmoker.app */;
+			productName = iOS;
+			productReference = CE0E6A6F24F13967007A9072 /* ExSmoker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE28AFEB24F128F200BCB558 /* ExSmoker (macOS) */ = {
+		CE0E6A8024F1397D007A9072 /* watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE28AFFB24F128F200BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (macOS)" */;
+			buildConfigurationList = CE0E6AA224F1397E007A9072 /* Build configuration list for PBXNativeTarget "watchOS" */;
 			buildPhases = (
-				CE28AFE824F128F200BCB558 /* Sources */,
-				CE28AFE924F128F200BCB558 /* Frameworks */,
-				CE28AFEA24F128F200BCB558 /* Resources */,
+				CE0E6A7F24F1397D007A9072 /* Resources */,
+				CE0E6AA124F1397E007A9072 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE0E6A8D24F1397E007A9072 /* PBXTargetDependency */,
 			);
-			name = "ExSmoker (macOS)";
-			productName = "ExSmoker (macOS)";
-			productReference = CE28AFEC24F128F200BCB558 /* ExSmoker.app */;
-			productType = "com.apple.product-type.application";
-		};
-		CE28AFFF24F12D8500BCB558 /* ExSmoker (watchOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CE28B02624F12D8600BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (watchOS)" */;
-			buildPhases = (
-				CE28AFFE24F12D8500BCB558 /* Resources */,
-				CE28B02524F12D8600BCB558 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CE28B00C24F12D8500BCB558 /* PBXTargetDependency */,
-			);
-			name = "ExSmoker (watchOS)";
-			productName = "ExSmoker (watchOS)";
-			productReference = CE7DA48924F137B9006F9849 /* ExSmoker.app */;
+			name = watchOS;
+			productName = watchOS;
+			productReference = CE0E6A8124F1397D007A9072 /* ExSmoker.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		CE28B00824F12D8500BCB558 /* ExSmoker (watchOS) Extension */ = {
+		CE0E6A8924F1397E007A9072 /* watchOS Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE28B02224F12D8600BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (watchOS) Extension" */;
+			buildConfigurationList = CE0E6A9E24F1397E007A9072 /* Build configuration list for PBXNativeTarget "watchOS Extension" */;
 			buildPhases = (
-				CE28B00524F12D8500BCB558 /* Sources */,
-				CE28B00624F12D8500BCB558 /* Frameworks */,
-				CE28B00724F12D8500BCB558 /* Resources */,
+				CE0E6A8624F1397E007A9072 /* Sources */,
+				CE0E6A8724F1397E007A9072 /* Frameworks */,
+				CE0E6A8824F1397E007A9072 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ExSmoker (watchOS) Extension";
-			productName = "ExSmoker (watchOS) Extension";
-			productReference = CE7DA48A24F137C2006F9849 /* ExSmoker.appex */;
+			name = "watchOS Extension";
+			productName = "watchOS Extension";
+			productReference = CE0E6A8A24F1397E007A9072 /* ExSmoker.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		CE0E6AA924F139CA007A9072 /* macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0E6AB724F139CA007A9072 /* Build configuration list for PBXNativeTarget "macOS" */;
+			buildPhases = (
+				CE0E6AA624F139CA007A9072 /* Sources */,
+				CE0E6AA724F139CA007A9072 /* Frameworks */,
+				CE0E6AA824F139CA007A9072 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOS;
+			productName = macOS;
+			productReference = CE0E6AAA24F139CA007A9072 /* ExSmoker.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE28AFD824F128F200BCB558 /* Project object */ = {
+		CEF8385324F13926005AA2D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					CE28AFE324F128F200BCB558 = {
+					CE0E6A6E24F13967007A9072 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					CE28AFEB24F128F200BCB558 = {
+					CE0E6A8024F1397D007A9072 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					CE28AFFF24F12D8500BCB558 = {
+					CE0E6A8924F1397E007A9072 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					CE28B00824F12D8500BCB558 = {
+					CE0E6AA924F139CA007A9072 = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
-			buildConfigurationList = CE28AFDB24F128F200BCB558 /* Build configuration list for PBXProject "ExSmoker" */;
+			buildConfigurationList = CEF8385624F13926005AA2D8 /* Build configuration list for PBXProject "ExSmoker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -290,116 +304,116 @@
 				en,
 				Base,
 			);
-			mainGroup = CE28AFD724F128F200BCB558;
+			mainGroup = CEF8385224F13926005AA2D8;
 			packageReferences = (
-				CE28B02A24F12E6600BCB558 /* XCRemoteSwiftPackageReference "core" */,
+				CE0E6ABA24F13A36007A9072 /* XCRemoteSwiftPackageReference "core" */,
+				CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */,
 			);
-			productRefGroup = CE28AFD724F128F200BCB558;
+			productRefGroup = CE0E6A7024F13967007A9072 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE28AFE324F128F200BCB558 /* ExSmoker (iOS) */,
-				CE28AFEB24F128F200BCB558 /* ExSmoker (macOS) */,
-				CE28AFFF24F12D8500BCB558 /* ExSmoker (watchOS) */,
-				CE28B00824F12D8500BCB558 /* ExSmoker (watchOS) Extension */,
+				CE0E6A6E24F13967007A9072 /* iOS */,
+				CE0E6A8024F1397D007A9072 /* watchOS */,
+				CE0E6A8924F1397E007A9072 /* watchOS Extension */,
+				CE0E6AA924F139CA007A9072 /* macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE28AFE224F128F200BCB558 /* Resources */ = {
+		CE0E6A6D24F13967007A9072 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA46824F13702006F9849 /* Assets.xcassets in Resources */,
-				CE7DA45F24F136DF006F9849 /* Info.plist in Resources */,
+				CE61839F24F13B7400BDC132 /* Assets.xcassets in Resources */,
+				CE0E6A7724F13967007A9072 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28AFEA24F128F200BCB558 /* Resources */ = {
+		CE0E6A7F24F1397D007A9072 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA46924F13702006F9849 /* Assets.xcassets in Resources */,
-				CE7DA46324F136EA006F9849 /* Info.plist in Resources */,
+				CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */,
+				CE0E6A8424F1397E007A9072 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28AFFE24F12D8500BCB558 /* Resources */ = {
+		CE0E6A8824F1397E007A9072 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA47524F1370F006F9849 /* Info.plist in Resources */,
-				CE7DA47424F1370F006F9849 /* Assets.xcassets in Resources */,
+				CE6183A224F13F0A00BDC132 /* Assets.xcassets in Resources */,
+				CE0E6A9624F1397E007A9072 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28B00724F12D8500BCB558 /* Resources */ = {
+		CE0E6AA824F139CA007A9072 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA48624F13719006F9849 /* Info.plist in Resources */,
-				CE7DA46A24F13702006F9849 /* Assets.xcassets in Resources */,
-				CE7DA48224F13719006F9849 /* Assets.xcassets in Resources */,
-				CE7DA47F24F13719006F9849 /* PushNotificationPayload.apns in Resources */,
+				CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */,
+				CE0E6AB124F139CA007A9072 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE28AFE024F128F200BCB558 /* Sources */ = {
+		CE0E6A6B24F13967007A9072 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA48824F1375B006F9849 /* App.swift in Sources */,
+				CE0E6A7524F13967007A9072 /* ContentView.swift in Sources */,
+				CE0E6A7324F13967007A9072 /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28AFE824F128F200BCB558 /* Sources */ = {
+		CE0E6A8624F1397E007A9072 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E6A9024F1397E007A9072 /* ContentView.swift in Sources */,
+				CE0E6A9224F1397E007A9072 /* ExSmokerApp.swift in Sources */,
+				CE0E6A9424F1397E007A9072 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE28B00524F12D8500BCB558 /* Sources */ = {
+		CE0E6AA624F139CA007A9072 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7DA48324F13719006F9849 /* ExSmokerApp.swift in Sources */,
-				CE7DA48524F13719006F9849 /* ContentView.swift in Sources */,
-				CE7DA48124F13719006F9849 /* NotificationController.swift in Sources */,
-				CE7DA48024F13719006F9849 /* ComplicationController.swift in Sources */,
-				CE7DA48424F13719006F9849 /* NotificationView.swift in Sources */,
+				CE0E6AAF24F139CA007A9072 /* ContentView.swift in Sources */,
+				CE0E6AAD24F139CA007A9072 /* macOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE28B00C24F12D8500BCB558 /* PBXTargetDependency */ = {
+		CE0E6A8D24F1397E007A9072 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE28B00824F12D8500BCB558 /* ExSmoker (watchOS) Extension */;
-			targetProxy = CE28B00B24F12D8500BCB558 /* PBXContainerItemProxy */;
+			target = CE0E6A8924F1397E007A9072 /* watchOS Extension */;
+			targetProxy = CE0E6A8C24F1397E007A9072 /* PBXContainerItemProxy */;
 		};
-		CE28B02024F12D8600BCB558 /* PBXTargetDependency */ = {
+		CE0E6A9C24F1397E007A9072 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE28AFFF24F12D8500BCB558 /* ExSmoker (watchOS) */;
-			targetProxy = CE28B01F24F12D8600BCB558 /* PBXContainerItemProxy */;
+			target = CE0E6A8024F1397D007A9072 /* watchOS */;
+			targetProxy = CE0E6A9B24F1397E007A9072 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CE28AFF624F128F200BCB558 /* Debug */ = {
+		CE0E6A7C24F13967007A9072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -424,15 +438,14 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -443,29 +456,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = ExSmoker;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CE28AFF724F128F200BCB558 /* Release */ = {
+		CE0E6A7D24F13967007A9072 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -490,226 +504,495 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0E6A9F24F1397E007A9072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS.watchkitapp.watchkitextension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		CE0E6AA024F1397E007A9072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS.watchkitapp.watchkitextension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0E6AA324F1397E007A9072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = watchOS_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		CE0E6AA424F1397E007A9072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = watchOS_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.iOS.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0E6AB824F139CA007A9072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.macOS;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		CE0E6AB924F139CA007A9072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.macOS;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CEF8385724F13926005AA2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = ExSmoker;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		CEF8385824F13926005AA2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = ExSmoker;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		CE28AFF924F128F200BCB558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CE28AFFA24F128F200BCB558 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CE28AFFC24F128F200BCB558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		CE28AFFD24F128F200BCB558 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		CE28B02324F12D8600BCB558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = "watchOS Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker.watchkitapp.watchkitextension;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		CE28B02424F12D8600BCB558 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = "watchOS Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker.watchkitapp.watchkitextension;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CE28B02724F12D8600BCB558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				IBSC_MODULE = ExSmoker__watchOS__Extension;
-				INFOPLIST_FILE = watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker.watchkitapp;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		CE28B02824F12D8600BCB558 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				IBSC_MODULE = ExSmoker__watchOS__Extension;
-				INFOPLIST_FILE = watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = exsmoker.ExSmoker.watchkitapp;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE28AFDB24F128F200BCB558 /* Build configuration list for PBXProject "ExSmoker" */ = {
+		CE0E6A7E24F13967007A9072 /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28AFF624F128F200BCB558 /* Debug */,
-				CE28AFF724F128F200BCB558 /* Release */,
+				CE0E6A7C24F13967007A9072 /* Debug */,
+				CE0E6A7D24F13967007A9072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE28AFF824F128F200BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (iOS)" */ = {
+		CE0E6A9E24F1397E007A9072 /* Build configuration list for PBXNativeTarget "watchOS Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28AFF924F128F200BCB558 /* Debug */,
-				CE28AFFA24F128F200BCB558 /* Release */,
+				CE0E6A9F24F1397E007A9072 /* Debug */,
+				CE0E6AA024F1397E007A9072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE28AFFB24F128F200BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (macOS)" */ = {
+		CE0E6AA224F1397E007A9072 /* Build configuration list for PBXNativeTarget "watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28AFFC24F128F200BCB558 /* Debug */,
-				CE28AFFD24F128F200BCB558 /* Release */,
+				CE0E6AA324F1397E007A9072 /* Debug */,
+				CE0E6AA424F1397E007A9072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE28B02224F12D8600BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (watchOS) Extension" */ = {
+		CE0E6AB724F139CA007A9072 /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28B02324F12D8600BCB558 /* Debug */,
-				CE28B02424F12D8600BCB558 /* Release */,
+				CE0E6AB824F139CA007A9072 /* Debug */,
+				CE0E6AB924F139CA007A9072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE28B02624F12D8600BCB558 /* Build configuration list for PBXNativeTarget "ExSmoker (watchOS)" */ = {
+		CEF8385624F13926005AA2D8 /* Build configuration list for PBXProject "ExSmoker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28B02724F12D8600BCB558 /* Debug */,
-				CE28B02824F12D8600BCB558 /* Release */,
+				CEF8385724F13926005AA2D8 /* Debug */,
+				CEF8385824F13926005AA2D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -717,7 +1000,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE28B02A24F12E6600BCB558 /* XCRemoteSwiftPackageReference "core" */ = {
+		CE0E6ABA24F13A36007A9072 /* XCRemoteSwiftPackageReference "core" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exsmoker/core.git";
 			requirement = {
@@ -725,15 +1008,28 @@
 				kind = branch;
 			};
 		};
+		CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/catverse/balam";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CE28B02B24F12E6600BCB558 /* Core */ = {
+		CE0E6ABB24F13A36007A9072 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE28B02A24F12E6600BCB558 /* XCRemoteSwiftPackageReference "core" */;
+			package = CE0E6ABA24F13A36007A9072 /* XCRemoteSwiftPackageReference "core" */;
 			productName = Core;
+		};
+		CE0E6ABE24F13A5D007A9072 /* Balam */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E6ABD24F13A5D007A9072 /* XCRemoteSwiftPackageReference "balam" */;
+			productName = Balam;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CE28AFD824F128F200BCB558 /* Project object */;
+	rootObject = CEF8385324F13926005AA2D8 /* Project object */;
 }

@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  watchOS Extension
+//  macOS
 //
 //  Created by vaux on 22.08.20.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Hello, world!")
             .padding()
     }
 }

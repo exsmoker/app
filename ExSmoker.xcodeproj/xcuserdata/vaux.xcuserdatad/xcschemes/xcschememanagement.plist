@@ -4,27 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ExSmoker (iOS).xcscheme_^#shared#^_</key>
+		<key>iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>ExSmoker (macOS).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>ExSmoker (watchOS) (Complication).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>ExSmoker (watchOS) (Notification).xcscheme_^#shared#^_</key>
+		<key>macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>ExSmoker (watchOS).xcscheme_^#shared#^_</key>
+		<key>watchOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -32,12 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CE28AFE324F128F200BCB558</key>
+		<key>CE0E6A6E24F13967007A9072</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE28AFFF24F12D8500BCB558</key>
+		<key>CE0E6A8024F1397D007A9072</key>
 		<dict>
 			<key>primary</key>
 			<true/>

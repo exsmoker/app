@@ -1,6 +1,6 @@
 //
 //  ComplicationController.swift
-//  ExSmoker (watchOS) Extension
+//  watchOS Extension
 //
 //  Created by vaux on 22.08.20.
 //
