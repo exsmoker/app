@@ -16,7 +16,7 @@ struct Reasons: View {
     @State private var social = false
     @State private var ecological = false
     @State private var health = false
-    @State private var reasons = [[ReasonModel]]()
+    @State private var reasons = [[Reason]]()
     
     var body: some View {
         NavigationView {
@@ -35,24 +35,33 @@ struct Reasons: View {
                     ForEach(self.reasons, id: \.self) { item in
                         HStack {
                             Spacer()
-                            Item(title: item.first!.id, image: item.first!.image, width: geo.size.width / 2.2)
+                            Item(reason: item.first!, width: geo.size.width / 2.2)
                             Spacer()
-                            Item(title: item.last!.id, image: item.last!.image, width: geo.size.width / 2.2)
-                            Spacer()
+                            if item.count == 2 {
+                                Item(reason: item.last!, width: geo.size.width / 2.2)
+                                Spacer()
+                            }
                         }
                     }
                 }
             }.navigationBarTitle("Reasons", displayMode: .large)
-            .onAppear {
-                    self.reasons = try! JSONDecoder().decode([[ReasonModel]].self, from: Data(contentsOf: Bundle.main.url(forResource: "reasons", withExtension: "json")!))
+                .onAppear {
+                    self.reasons = stride(from: 0, to: Reason.allCases.count, by: 2).reduce(into: []) {
+                        $0.append({
+                            var item = [Reason.allCases[$0]]
+                            if $0 + 1 < Reason.allCases.count {
+                                item.append(Reason.allCases[$0 + 1])
+                            }
+                            return item
+                        } ($1))
+                    }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 private struct Item: View {
-    let title: String
-    let image: String
+    let reason: Reason
     let width: CGFloat
     
     var body: some View {
@@ -62,9 +71,9 @@ private struct Item: View {
                 .foregroundColor(.init(.secondarySystemBackground))
                 .shadow(color: .init(.secondarySystemBackground), radius: 3, x: 1, y: 1)
             VStack {
-                Image(image)
+                Image(reason.image)
                     .renderingMode(.original)
-                Text(title)
+                Text(reason.title)
                     .font(.headline)
                     .foregroundColor(.secondary)
             }

@@ -1,15 +1,18 @@
-//
-//  Reason.swift
-//  exsmoker
-//
-//  Created by vaux on 19.08.20.
-//  Copyright © 2020 exsmoker. All rights reserved.
-//
+import Foundation
 
-import SwiftUI
-
-struct Reason: View {
-    var body: some View {
-        Circle()
+enum Reason: CaseIterable {
+    case
+    health_respiratory
+    
+    var image: String {
+        "reason_\(self)"
+    }
+    
+    var title: String {
+        "Reason.title.\(self)"
+    }
+    
+    var description: String {
+        "Reason.description.\(self)"
     }
 }
