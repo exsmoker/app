@@ -9,11 +9,19 @@ struct Main: View {
                 }
             Circle()
                 .tabItem {
-                    Image(systemName: "hammer")
+                    Image(systemName: "chart.bar")
                 }
             Circle()
                 .tabItem {
-                    Image(systemName: "home")
+                    Image(systemName: "chart.pie")
+                }
+            Circle()
+                .tabItem {
+                    Image(systemName: "star")
+                }
+            Circle()
+                .tabItem {
+                    Image(systemName: "slider.horizontal.3")
                 }
         }.tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))

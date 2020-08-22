@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0E6A7324F13967007A9072 /* ExSmoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* ExSmoker.swift */; };
+		CE0E6A7324F13967007A9072 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* App.swift */; };
 		CE0E6A7524F13967007A9072 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7424F13967007A9072 /* Main.swift */; };
 		CE0E6A7724F13967007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A7624F13967007A9072 /* Assets.xcassets */; };
 		CE0E6A8424F1397E007A9072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E6A8324F1397E007A9072 /* Assets.xcassets */; };
@@ -72,7 +72,7 @@
 
 /* Begin PBXFileReference section */
 		CE0E6A6F24F13967007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE0E6A7224F13967007A9072 /* ExSmoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSmoker.swift; sourceTree = "<group>"; };
+		CE0E6A7224F13967007A9072 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CE0E6A7424F13967007A9072 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		CE0E6A7624F13967007A9072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0E6A7B24F13967007A9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0E6A7B24F13967007A9072 /* Info.plist */,
-				CE0E6A7224F13967007A9072 /* ExSmoker.swift */,
+				CE0E6A7224F13967007A9072 /* App.swift */,
 				CE0E6A7424F13967007A9072 /* Main.swift */,
 				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
 			);
@@ -366,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,
-				CE0E6A7324F13967007A9072 /* ExSmoker.swift in Sources */,
+				CE0E6A7324F13967007A9072 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

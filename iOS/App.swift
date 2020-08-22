@@ -1,6 +1,6 @@
 import SwiftUI
 
-@main struct ExSmoker: App {
+@main struct App: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             Main()
