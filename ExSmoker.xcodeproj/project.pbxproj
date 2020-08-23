@@ -30,6 +30,7 @@
 		CE25A8C924F156FF008488F6 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8C824F156FF008488F6 /* Balam */; };
 		CE25A8CB24F15709008488F6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8CA24F15709008488F6 /* Core */; };
 		CE25A8CD24F15709008488F6 /* Balam in Frameworks */ = {isa = PBXBuildFile; productRef = CE25A8CC24F15709008488F6 /* Balam */; };
+		CE31F09C24F2615200AADA52 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F09B24F2615100AADA52 /* Settings.swift */; };
 		CE61839F24F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		CE0E6AB624F139CA007A9072 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		CE25A8BF24F14EA9008488F6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CE25A8C124F1568D008488F6 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CE31F09B24F2615100AADA52 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				CE0E6A7224F13967007A9072 /* App.swift */,
 				CE25A8BF24F14EA9008488F6 /* Home.swift */,
 				CE0E6A7424F13967007A9072 /* Main.swift */,
+				CE31F09B24F2615100AADA52 /* Settings.swift */,
 				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
 			);
 			path = iOS;
@@ -401,6 +404,7 @@
 				CE25A8C224F1568D008488F6 /* Session.swift in Sources */,
 				CE25A8C024F14EA9008488F6 /* Home.swift in Sources */,
 				CE0E6A7324F13967007A9072 /* App.swift in Sources */,
+				CE31F09C24F2615200AADA52 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

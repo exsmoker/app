@@ -21,7 +21,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "star.fill")
                 }
-            Circle()
+            Settings()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                 }

@@ -1,27 +1,11 @@
 import SwiftUI
 
-struct Home: View {
+struct Settings: View {
     @EnvironmentObject var session: Session
-    @State private var greet = ""
     
     var body: some View {
         ScrollView {
-            Spacer()
-                .frame(height: 30)
-            HStack {
-                Text(.init(greet))
-                    .bold()
-                    .foregroundColor(.secondary)
-                Spacer()
-            }.padding()
-        }.onAppear {
-            switch Calendar.current.component(.hour, from: .init()) {
-            case 6 ..< 12: greet = "Greet.morning"
-            case 12: greet = "Greet.noon"
-            case 13 ..< 17: greet = "Greet.afternoon"
-            case 17 ..< 22: greet = "Greet.evening"
-            default: greet = "Greet.night"
-            }
+            Profile()
         }
     }
 }
