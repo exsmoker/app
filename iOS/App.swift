@@ -5,11 +5,16 @@ import SwiftUI
     
     var body: some Scene {
         WindowGroup {
-            Main()
-                .environmentObject(session)
-                .onAppear {
-                    session.load()
-                }
+            if session.user == nil {
+                Onboard()
+                    .environmentObject(session)
+                    .onAppear {
+                        session.load()
+                    }
+            } else {
+                Main()
+                    .environmentObject(session)
+            }
         }
     }
 }
