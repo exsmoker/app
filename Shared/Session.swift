@@ -16,4 +16,15 @@ final class Session: ObservableObject {
             sub?.cancel()
         }
     }
+    
+    func create(_ name: String, location: String, price: Double, quantity: Int, currency: User.Currency) {
+        var user = User()
+        user.name = name.isEmpty ? NSLocalizedString("Cezz.appleseed", comment: "") : name
+        user.location = location.isEmpty ? NSLocalizedString("Berlin.germany", comment: "") : location
+        user.price = price
+        user.quantity = quantity
+        user.currency = currency
+        session.add(user)
+        self.user = user
+    }
 }

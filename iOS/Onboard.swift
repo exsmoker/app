@@ -6,6 +6,9 @@ struct Onboard: View {
     @State private var offset = CGFloat()
     @State private var name = ""
     @State private var location = ""
+    @State private var currency = User.Currency.euro
+    @State private var price = Double(0.5)
+    @State private var quantity = Int(5)
     
     var body: some View {
         GeometryReader { geo in
@@ -22,9 +25,10 @@ struct Onboard: View {
                                 RoundedRectangle(cornerRadius: 3)
                                     .frame(height: 6)
                                     .foregroundColor(.accentColor)
-                                    .frame(width: CGFloat(200) / 3 * (self.offset + 1))
-                                        Spacer()
-                                Spacer()
+                                    .frame(width: CGFloat(200) / 6 * (offset + 1))
+                                if offset < 5 {
+                                    Spacer()
+                                }
                             }
                         }.frame(width: 200)
                             .padding(.top, 10)
@@ -34,35 +38,50 @@ struct Onboard: View {
                     HStack {
                         Button(action: {
                             withAnimation {
-                                self.offset -= 1
+                                hideKeyboard()
+                                offset -= 1
                             }
                         }) {
                             Image(systemName: "arrow.left.circle.fill")
                                 .font(.largeTitle)
                                 .padding()
-                        }.disabled(self.offset == 0)
-                            .opacity(self.offset == 0 ? 0.4 : 1)
+                        }.disabled(offset == 0)
+                            .opacity(offset == 0 ? 0.4 : 1)
                         Button(action: {
                             withAnimation {
-                                self.offset += 1
+                                hideKeyboard()
+                                offset += 1
                             }
                         }) {
                             Image(systemName: "arrow.right.circle.fill")
                                 .font(.largeTitle)
                                 .padding()
-                        }.disabled(self.offset == 1)
-                            .opacity(self.offset == 1 ? 0.4 : 1)
+                        }.disabled(offset == 5)
+                            .opacity(offset == 5 ? 0.4 : 1)
                     }
                 }
                 HStack(spacing: 0) {
                     First()
                         .frame(width: geo.size.width, height: geo.size.height)
-                    First()
+                    Second(name: $name)
                         .frame(width: geo.size.width, height: geo.size.height)
+                    Third(location: $location)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    Fourth(currency: $currency, price: $price)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    Fifth(quantity: $quantity)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    Sixth {
+                        session.create(name, location: location, price: price, quantity: quantity, currency: currency)
+                    }.frame(width: geo.size.width, height: geo.size.height)
                 }.frame(width: geo.size.width, height: geo.size.height, alignment: .leading)
-                    .offset(x: geo.size.width * -self.offset)
+                    .offset(x: geo.size.width * -offset)
             }
         }
+    }
+    
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
@@ -86,6 +105,163 @@ private struct First: View {
             }
             Spacer()
                 .frame(height: 50)
+        }
+    }
+}
+
+private struct Second: View {
+    @Binding var name: String
+    
+    var body: some View {
+        VStack {
+            Text("What.your.name")
+                .foregroundColor(.secondary)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: 240, height: 40)
+                    .foregroundColor(.init(.secondarySystemBackground))
+                HStack {
+                    Spacer()
+                    TextField("Cezz.appleseed", text: $name)
+                        .autocapitalization(.sentences)
+                        .multilineTextAlignment(.center)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(width: 220, height: 40)
+                    Spacer()
+                }
+            }
+        }
+    }
+}
+
+private struct Third: View {
+    @Binding var location: String
+    
+    var body: some View {
+        VStack {
+            Text("What.your.location")
+                .foregroundColor(.secondary)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: 240, height: 40)
+                    .foregroundColor(.init(.secondarySystemBackground))
+                HStack {
+                    Spacer()
+                    TextField("Berlin.germany", text: $location)
+                        .autocapitalization(.sentences)
+                        .multilineTextAlignment(.center)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(width: 220, height: 40)
+                    Spacer()
+                }
+            }
+        }
+    }
+}
+
+private struct Fourth: View {
+    @Binding var currency: User.Currency
+    @Binding var price: Double
+    @State private var cost = ""
+    @State private var formatter = NumberFormatter()
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text("On.average")
+                    .font(.title)
+                    .foregroundColor(.primary)
+                    .padding(.leading)
+                Spacer()
+            }
+            HStack {
+                Text("Cost.per.cigarette")
+                    .foregroundColor(.secondary)
+                    .padding(.leading)
+                Spacer()
+            }
+            Text(verbatim: cost)
+                .font(Font.title.bold())
+                .foregroundColor(.accentColor)
+                .padding()
+            Stepper("") {
+                price = min(3, price + 0.1)
+                update()
+            } onDecrement: {
+                price = max(0.1, price - 0.1)
+                update()
+            }.font(.title)
+                .labelsHidden()
+                .padding()
+            Picker("", selection: $currency) {
+                Text(verbatim: "$")
+                    .bold()
+                    .tag(User.Currency.dollar)
+                Text(verbatim: "€")
+                    .bold()
+                    .tag(User.Currency.euro)
+                Text(verbatim: "£")
+                    .tag(User.Currency.pound)
+            }.pickerStyle(SegmentedPickerStyle())
+                .labelsHidden()
+                .frame(width: 230)
+                .padding()
+        }.onAppear {
+            formatter.numberStyle = .currency
+            update()
+        }.onChange(of: currency) { _ in
+            update()
+        }
+    }
+    
+    private func update() {
+        switch currency {
+        case .dollar: formatter.currencySymbol = "$"
+        case .euro: formatter.currencySymbol = "€"
+        case .pound: formatter.currencySymbol = "£"
+        }
+        cost = formatter.string(from: .init(value: price))!
+    }
+}
+
+private struct Fifth: View {
+    @Binding var quantity: Int
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text("On.average")
+                    .font(.title)
+                    .foregroundColor(.primary)
+                    .padding(.leading)
+                Spacer()
+            }
+            HStack {
+                Text("Cigarettes.daily")
+                    .foregroundColor(.secondary)
+                    .padding(.leading)
+                Spacer()
+            }
+            Text(verbatim: "\(quantity)")
+                .font(Font.title.bold())
+                .foregroundColor(.accentColor)
+                .padding()
+            Stepper("", value: $quantity, in: 1 ... 60)
+                .labelsHidden()
+                .padding()
+        }
+    }
+}
+
+private struct Sixth: View {
+    let action: () -> Void
+    
+    var body: some View {
+        VStack {
+            Text("Everything.ready")
+                .foregroundColor(.secondary)
+                .padding()
+            Control.Title(title: "Start", background: .accentColor, width: 120, action: action)
         }
     }
 }
