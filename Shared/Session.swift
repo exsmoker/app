@@ -1,11 +1,19 @@
 import SwiftUI
 import Core
+import Balam
+import Combine
 
 final class Session: ObservableObject {
-    @Published private(set) var user = User()
+    @Published private(set) var user: User!
+    private let session = Balam("Session")
     
     func load() {
-        user.name = "John Appleseed"
-        user.location = "Berlin, Germany"
+        var sub: AnyCancellable?
+        sub = session.nodes(User.self).sink {
+            if let user = $0.first {
+                self.user = user
+            }
+            sub?.cancel()
+        }
     }
 }
