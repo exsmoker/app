@@ -10,6 +10,7 @@ Cigarettes.daily = "Cigarettes per day";
 Currency = "Currency";
 Everything.ready = "Your profile is ready!";
 Start = "Start";
+How.are.you = "How are you feeling?";
 "Greet.morning %@" = "Good morning, %@";
 "Greet.noon %@" = "Good day, %@";
 "Greet.afternoon %@" = "Good afternoon, %@";

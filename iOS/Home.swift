@@ -15,10 +15,20 @@ struct Home: View {
             }
             HStack {
                 Text(greet)
-                    .bold()
-                    .foregroundColor(.secondary)
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                    .padding(.leading)
                 Spacer()
-            }.padding()
+            }
+            HStack {
+                Text("How.are.you")
+                    .foregroundColor(.secondary)
+                    .padding(.leading)
+                Spacer()
+            }
+            Control.Circle(image: "flame") {
+                
+            }
         }.onAppear {
             switch Calendar.current.component(.hour, from: .init()) {
             case 6 ..< 12:

@@ -41,6 +41,7 @@
 		CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A224F13F0A00BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
+		CE779CE124F41B6E00CFE9BC /* Control.Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		CE31F0A824F2B91C00AADA52 /* Control.Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Title.swift; sourceTree = "<group>"; };
 		CE31F0AA24F2B95500AADA52 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Circle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				CE0E6A7B24F13967007A9072 /* Info.plist */,
 				CE0E6A7224F13967007A9072 /* App.swift */,
+				CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */,
 				CE31F0AA24F2B95500AADA52 /* Control.swift */,
 				CE31F0A824F2B91C00AADA52 /* Control.Title.swift */,
 				CE25A8BF24F14EA9008488F6 /* Home.swift */,
@@ -419,6 +422,7 @@
 			files = (
 				CE31F0A924F2B91C00AADA52 /* Control.Title.swift in Sources */,
 				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,
+				CE779CE124F41B6E00CFE9BC /* Control.Circle.swift in Sources */,
 				CE25A8C224F1568D008488F6 /* Session.swift in Sources */,
 				CE31F0AB24F2B95500AADA52 /* Control.swift in Sources */,
 				CE25A8C024F14EA9008488F6 /* Home.swift in Sources */,
