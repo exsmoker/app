@@ -11,3 +11,7 @@ Currency = "Currency";
 Everything.ready = "Your profile is ready!";
 Start = "Start";
 "Greet.morning %@" = "Good morning, %@";
+"Greet.noon %@" = "Good day, %@";
+"Greet.afternoon %@" = "Good afternoon, %@";
+"Greet.evening %@" = "Good evening, %@";
+"Greet.night %@" = "Good night, %@";

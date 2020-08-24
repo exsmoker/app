@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Home: View {
     @EnvironmentObject var session: Session
-    @State private var greet = ""
+    @State private var greet = LocalizedStringKey("")
     @State private var image = ""
     
     var body: some View {
@@ -14,7 +14,7 @@ struct Home: View {
                     .padding()
             }
             HStack {
-                Text(.init(greet))
+                Text(greet)
                     .bold()
                     .foregroundColor(.secondary)
                 Spacer()
@@ -22,19 +22,19 @@ struct Home: View {
         }.onAppear {
             switch Calendar.current.component(.hour, from: .init()) {
             case 6 ..< 12:
-                greet = "Greet.morning \(session.user.name)"
+                greet = "Greet.morning \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_morning"
             case 12:
-                greet = "Greet.noon"
+                greet = "Greet.noon \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_noon"
             case 13 ..< 17:
-                greet = "Greet.afternoon"
+                greet = "Greet.afternoon \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_afternoon"
             case 17 ..< 22:
-                greet = "Greet.evening"
+                greet = "Greet.evening \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_evening"
             default:
-                greet = "Greet.night"
+                greet = "Greet.night \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_night"
             }
         }
