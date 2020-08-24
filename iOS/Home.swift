@@ -3,11 +3,16 @@ import SwiftUI
 struct Home: View {
     @EnvironmentObject var session: Session
     @State private var greet = ""
+    @State private var image = ""
     
     var body: some View {
         ScrollView {
             Spacer()
                 .frame(height: 30)
+            if !image.isEmpty {
+                Image(image)
+                    .padding()
+            }
             HStack {
                 Text(.init(greet))
                     .bold()
@@ -16,11 +21,21 @@ struct Home: View {
             }.padding()
         }.onAppear {
             switch Calendar.current.component(.hour, from: .init()) {
-            case 6 ..< 12: greet = "Greet.morning"
-            case 12: greet = "Greet.noon"
-            case 13 ..< 17: greet = "Greet.afternoon"
-            case 17 ..< 22: greet = "Greet.evening"
-            default: greet = "Greet.night"
+            case 6 ..< 12:
+                greet = "Greet.morning \(session.user.name)"
+                image = "home_morning"
+            case 12:
+                greet = "Greet.noon"
+                image = "home_noon"
+            case 13 ..< 17:
+                greet = "Greet.afternoon"
+                image = "home_afternoon"
+            case 17 ..< 22:
+                greet = "Greet.evening"
+                image = "home_evening"
+            default:
+                greet = "Greet.night"
+                image = "home_night"
             }
         }
     }
