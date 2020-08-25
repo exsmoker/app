@@ -35,6 +35,13 @@ struct Onboard: View {
                         Spacer()
                     }
                     Spacer()
+                    Button(action: {
+                        finish()
+                    }) {
+                        Text("Skip")
+                            .foregroundColor(.secondary)
+                            .padding()
+                    }
                     HStack {
                         Button(action: {
                             withAnimation {
@@ -72,7 +79,7 @@ struct Onboard: View {
                     Fifth(quantity: $quantity)
                         .frame(width: geo.size.width, height: geo.size.height)
                     Sixth {
-                        session.create(name, location: location, price: price, quantity: quantity, currency: currency)
+                        finish()
                     }.frame(width: geo.size.width, height: geo.size.height)
                 }.frame(width: geo.size.width, height: geo.size.height, alignment: .leading)
                     .offset(x: geo.size.width * -offset)
@@ -83,6 +90,10 @@ struct Onboard: View {
     private func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+    
+    private func finish() {
+        session.create(name, location: location, price: price, quantity: quantity, currency: currency)
+    }
 }
 
 private struct First: View {
@@ -91,9 +102,8 @@ private struct First: View {
             Image("logo")
             HStack {
                 Text("Welcome")
-                    .bold()
+                    .font(Font.title.bold())
                     .padding(.leading)
-                    .foregroundColor(.primary)
                 Spacer()
             }
             HStack {
@@ -104,7 +114,15 @@ private struct First: View {
                 Spacer()
             }
             Spacer()
-                .frame(height: 50)
+                .frame(height: 20)
+            HStack {
+                Text("Bear.with.us")
+                    .font(.footnote)
+                    .padding()
+                Spacer()
+            }
+            Spacer()
+                .frame(height: 80)
         }
     }
 }
@@ -170,7 +188,6 @@ private struct Fourth: View {
             HStack {
                 Text("On.average")
                     .font(.title)
-                    .foregroundColor(.primary)
                     .padding(.leading)
                 Spacer()
             }
@@ -232,7 +249,6 @@ private struct Fifth: View {
             HStack {
                 Text("On.average")
                     .font(.title)
-                    .foregroundColor(.primary)
                     .padding(.leading)
                 Spacer()
             }

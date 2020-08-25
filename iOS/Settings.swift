@@ -27,7 +27,6 @@ private struct Profile: View {
             }.padding(.top, 50)
             Text(verbatim: session.user.name)
                 .bold()
-                .foregroundColor(.primary)
                 .padding(.top)
             Text(verbatim: session.user.location)
                 .font(.footnote)
