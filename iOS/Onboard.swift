@@ -9,6 +9,7 @@ struct Onboard: View {
     @State private var currency = User.Currency.euro
     @State private var price = Double(0.5)
     @State private var quantity = Int(5)
+    @State private var opacity = Double(1)
     
     var body: some View {
         GeometryReader { geo in
@@ -85,7 +86,7 @@ struct Onboard: View {
                     }.frame(width: geo.size.width, height: geo.size.height)
                 }.frame(width: geo.size.width, height: geo.size.height, alignment: .leading)
                     .offset(x: geo.size.width * -offset)
-            }
+            }.opacity(opacity)
         }
     }
     
@@ -94,7 +95,12 @@ struct Onboard: View {
     }
     
     private func finish() {
-        session.create(name, location: location, price: price, quantity: quantity, currency: currency)
+        withAnimation {
+            opacity = 0
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            session.create(name, location: location, price: price, quantity: quantity, currency: currency)
+        }
     }
 }
 
