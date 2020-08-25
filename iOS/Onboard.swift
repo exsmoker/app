@@ -35,12 +35,14 @@ struct Onboard: View {
                         Spacer()
                     }
                     Spacer()
-                    Button(action: {
-                        finish()
-                    }) {
-                        Text("Skip")
-                            .foregroundColor(.secondary)
-                            .padding()
+                    if offset < 5 {
+                        Button(action: {
+                            finish()
+                        }) {
+                            Text("Skip")
+                                .foregroundColor(.secondary)
+                                .padding()
+                        }
                     }
                     HStack {
                         Button(action: {
