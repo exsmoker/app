@@ -5,6 +5,7 @@ import Combine
 
 final class Session: ObservableObject {
     @Published private(set) var user: User!
+    let smoke = Smoke()
     private let session = Balam("Session")
     
     func load() {
