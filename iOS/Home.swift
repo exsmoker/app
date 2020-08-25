@@ -19,9 +19,30 @@ struct Home: View {
                     .padding(.leading)
                 Spacer()
             }
+            Spacer()
+                .frame(height: 50)
             Control.Circle(image: "flame") {
                 
             }
+            Spacer()
+                .frame(height: 50)
+            Text("Your.current.streak")
+                .font(.subheadline)
+            Text(verbatim: session.smoke.stroke)
+                .font(Font.largeTitle.bold())
+                .foregroundColor(.accentColor)
+            HStack {
+                Spacer()
+                Button(action: {
+                    
+                }) {
+                    Text("More stats")
+                        .foregroundColor(.secondary)
+                        .padding()
+                }
+            }
+            Spacer()
+                .frame(height: 20)
         }.onAppear {
             switch Calendar.current.component(.hour, from: .init()) {
             case 6 ..< 12:
@@ -40,31 +61,6 @@ struct Home: View {
                 greet = "Greet.night \(session.user.name.components(separatedBy: " ").first!)"
                 image = "home_night"
             }
-        }
-    }
-}
-
-private struct Profile: View {
-    @EnvironmentObject var session: Session
-    
-    var body: some View {
-        VStack {
-            ZStack {
-                Circle()
-                    .frame(width: 120, height: 120)
-                    .foregroundColor(.init(.secondarySystemBackground))
-                    .shadow(color: .init(.tertiaryLabel), radius: 16, x: 0, y: 0)
-                    .padding()
-                Image(systemName: "person.fill")
-                    .font(.largeTitle)
-                    .foregroundColor(.accentColor)
-            }.padding(.top, 50)
-            Text(verbatim: session.user.name)
-                .bold()
-                .padding(.top)
-            Text(verbatim: session.user.location)
-                .font(.footnote)
-                .foregroundColor(.secondary)
         }
     }
 }

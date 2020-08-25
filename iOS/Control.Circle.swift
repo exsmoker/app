@@ -8,12 +8,13 @@ extension Control {
         var body: some View {
             Button(action: action) {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 22)
-                        .frame(width: 44, height: 44)
-                        .shadow(color: .init(.quaternaryLabel), radius: 2, x: -1, y: -1)
-                        .shadow(color: .init(.quaternaryLabel), radius: 7, x: 5, y: 5)
+                    RoundedRectangle(cornerRadius: 28)
+                        .frame(width: 56, height: 56)
+                        .shadow(color: .accentColor, radius: 2, x: -1, y: -1)
+                        .shadow(color: .accentColor, radius: 6, x: 3, y: 3)
                         .foregroundColor(.init(.systemBackground))
                     Image(systemName: image)
+                        .font(.title)
                         .foregroundColor(.accentColor)
                 }.frame(width: 70, height: 70)
             }
