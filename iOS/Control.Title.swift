@@ -12,6 +12,8 @@ extension Control {
                 ZStack {
                     RoundedRectangle(cornerRadius: 17)
                         .frame(width: width, height: 34)
+                        .shadow(color: background, radius: 2, x: -1, y: -1)
+                        .shadow(color: background, radius: 6, x: 3, y: 3)
                         .foregroundColor(background)
                     Text(title)
                         .font(Font.caption.bold())

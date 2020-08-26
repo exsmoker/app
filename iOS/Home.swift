@@ -6,6 +6,9 @@ struct Home: View {
     @State private var greet = LocalizedStringKey("")
     @State private var image = ""
     @State private var streak = ""
+    @State private var disclose = false
+    @State private var cravingY = CGFloat()
+    @State private var smokedY = CGFloat()
     
     var body: some View {
         ZStack {
@@ -44,17 +47,39 @@ struct Home: View {
             }
             VStack {
                 Spacer()
-                Control.Title(title: "Have a craving", background: .orange, width: 180) {
-                    
-                }
-                Control.Title(title: "Just smoked", background: .pink, width: 180) {
-                    
-                }
-                Control.Circle(image: "xmark") {
-                    
-                }
-                Control.Circle(image: "flame") {
-                    
+                ZStack {
+                    if disclose {
+                        Control.Title(title: "Craving", background: .accentColor, width: 180) {
+                            
+                        }.offset(y: cravingY)
+                        Control.Title(title: "Smoked", background: .accentColor, width: 180) {
+                            
+                        }.offset(y: smokedY)
+                    }
+                    Control.Circle(image: disclose ? "xmark" : "flame") {
+                        if disclose {
+                            withAnimation(Animation.easeOut(duration: 0.3)) {
+                                smokedY = 0
+                                cravingY = 0
+                            }
+                            
+                            withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
+                                disclose = false
+                            }
+                        } else {
+                            withAnimation(Animation.linear(duration: 0.2)) {
+                                disclose = true
+                            }
+                            
+                            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
+                                smokedY = -100
+                            }
+                            
+                            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
+                                cravingY = -170
+                            }
+                        }
+                    }
                 }
                 Spacer()
                     .frame(height: 80)
