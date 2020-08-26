@@ -10,8 +10,8 @@ extension Control {
         var body: some View {
             Button(action: action) {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 14)
-                        .frame(width: width, height: 30)
+                    RoundedRectangle(cornerRadius: 17)
+                        .frame(width: width, height: 34)
                         .foregroundColor(background)
                     Text(title)
                         .font(Font.caption.bold())

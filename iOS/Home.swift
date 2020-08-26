@@ -8,40 +8,56 @@ struct Home: View {
     @State private var streak = ""
     
     var body: some View {
-        ScrollView {
-            Spacer()
-                .frame(height: 40)
-            if !image.isEmpty {
-                Image(image)
-                    .padding()
-            }
-            Text(greet)
-                .font(.headline)
-                .padding(.leading)
-            Text("Your.current.streak")
-                .foregroundColor(.secondary)
-                .font(.caption)
-            Text(verbatim: streak)
-                .font(Font.largeTitle.bold())
-                .foregroundColor(.accentColor)
-            HStack {
+        ZStack {
+            ScrollView {
                 Spacer()
-                Button(action: {
-                    withAnimation {
-                        tab = 1
-                    }
-                }) {
-                    HStack {
-                        Text("Stats")
-                        Image(systemName: "arrow.right")
-                    }.foregroundColor(.secondary)
-                    .padding()
+                    .frame(height: 40)
+                if !image.isEmpty {
+                    Image(image)
+                        .padding()
                 }
+                Text(greet)
+                    .font(.headline)
+                    .padding(.leading)
+                Text("Your.current.streak")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+                Text(verbatim: streak)
+                    .font(Font.largeTitle.bold())
+                    .foregroundColor(.accentColor)
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            tab = 1
+                        }
+                    }) {
+                        HStack {
+                            Text("Stats")
+                            Image(systemName: "arrow.right")
+                        }.foregroundColor(.secondary)
+                        .padding()
+                    }
+                }
+                Spacer()
+                    .frame(height: 100)
             }
-            Spacer()
-                .frame(height: 50)
-            Control.Circle(image: "flame") {
-                
+            VStack {
+                Spacer()
+                Control.Title(title: "Have a craving", background: .orange, width: 180) {
+                    
+                }
+                Control.Title(title: "Just smoked", background: .pink, width: 180) {
+                    
+                }
+                Control.Circle(image: "xmark") {
+                    
+                }
+                Control.Circle(image: "flame") {
+                    
+                }
+                Spacer()
+                    .frame(height: 80)
             }
         }.onAppear {
             update()
