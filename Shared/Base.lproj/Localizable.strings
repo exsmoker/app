@@ -13,6 +13,7 @@ Start = "Start";
 Bear.with.us = "Bear with us while we build your profile, should take a few minutes.";
 Skip = "Skip";
 Your.current.streak = "Your current streak is";
+Stats = "Stats";
 "Greet.morning %@" = "Good morning, %@";
 "Greet.noon %@" = "Good day, %@";
 "Greet.afternoon %@" = "Good afternoon, %@";

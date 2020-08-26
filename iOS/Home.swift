@@ -10,26 +10,17 @@ struct Home: View {
     var body: some View {
         ScrollView {
             Spacer()
-                .frame(height: 30)
+                .frame(height: 40)
             if !image.isEmpty {
                 Image(image)
                     .padding()
             }
-            HStack {
-                Text(greet)
-                    .font(.headline)
-                    .padding(.leading)
-                Spacer()
-            }
-            Spacer()
-                .frame(height: 50)
-            Control.Circle(image: "flame") {
-                
-            }
-            Spacer()
-                .frame(height: 50)
+            Text(greet)
+                .font(.headline)
+                .padding(.leading)
             Text("Your.current.streak")
-                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .font(.caption)
             Text(verbatim: streak)
                 .font(Font.largeTitle.bold())
                 .foregroundColor(.accentColor)
@@ -40,13 +31,18 @@ struct Home: View {
                         tab = 1
                     }
                 }) {
-                    Text("More stats")
-                        .foregroundColor(.secondary)
-                        .padding()
+                    HStack {
+                        Text("Stats")
+                        Image(systemName: "arrow.right")
+                    }.foregroundColor(.secondary)
+                    .padding()
                 }
             }
             Spacer()
-                .frame(height: 20)
+                .frame(height: 50)
+            Control.Circle(image: "flame") {
+                
+            }
         }.onAppear {
             update()
         }.onChange(of: tab) {
