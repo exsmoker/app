@@ -9,6 +9,7 @@ struct Home: View {
     @State private var disclose = false
     @State private var cravingY = CGFloat()
     @State private var smokedY = CGFloat()
+    @State private var event: Triggers.Event?
     
     var body: some View {
         ZStack {
@@ -50,35 +51,22 @@ struct Home: View {
                 ZStack {
                     if disclose {
                         Control.Title(title: "Craving", background: .accentColor, width: 180) {
-                            
+                            event = .craving
+                            hide()
                         }.offset(y: cravingY)
                         Control.Title(title: "Smoked", background: .accentColor, width: 180) {
-                            
+                            event = .smoked
+                            hide()
                         }.offset(y: smokedY)
                     }
-                    Control.Circle(image: disclose ? "xmark" : "flame") {
+                    Control.Circle(image: disclose ? "xmark" : "flame", color: disclose ? .init(.tertiaryLabel) : .accentColor, font: disclose ? .body : .title) {
                         if disclose {
-                            withAnimation(Animation.easeOut(duration: 0.3)) {
-                                smokedY = 0
-                                cravingY = 0
-                            }
-                            
-                            withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
-                                disclose = false
-                            }
+                            hide()
                         } else {
-                            withAnimation(Animation.linear(duration: 0.2)) {
-                                disclose = true
-                            }
-                            
-                            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
-                                smokedY = -100
-                            }
-                            
-                            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
-                                cravingY = -170
-                            }
+                            show()
                         }
+                    }.sheet(item: $event) {
+                        Triggers(event: $0, visible: $event)
                     }
                 }
                 Spacer()
@@ -112,5 +100,26 @@ struct Home: View {
             image = "home_night"
         }
         streak = session.smoke.streak
+    }
+    
+    private func hide() {
+        withAnimation(Animation.easeOut(duration: 0.3)) {
+            smokedY = 0
+            cravingY = 0
+        }
+        
+        withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
+            disclose = false
+        }
+    }
+    
+    private func show() {
+        withAnimation(Animation.linear(duration: 0.2)) {
+            disclose = true
+        }
+        withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
+            smokedY = -100
+            cravingY = -170
+        }
     }
 }
