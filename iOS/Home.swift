@@ -59,7 +59,7 @@ struct Home: View {
                             hide()
                         }.offset(y: smokedY)
                     }
-                    Control.Circle(image: disclose ? "xmark" : "flame", color: disclose ? .init(.tertiaryLabel) : .accentColor, font: disclose ? .body : .title) {
+                    Control.Circle(image: disclose ? "xmark" : "flame", color: disclose ? .purple : .accentColor) {
                         if disclose {
                             hide()
                         } else {
@@ -108,18 +108,20 @@ struct Home: View {
             cravingY = 0
         }
         
-        withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
+        withAnimation(Animation.linear(duration: 0.1).delay(0.1)) {
             disclose = false
         }
     }
     
     private func show() {
-        withAnimation(Animation.linear(duration: 0.2)) {
+        withAnimation(Animation.linear(duration: 0.3)) {
             disclose = true
         }
+        withAnimation(Animation.easeOut(duration: 0.2).delay(0.1)) {
+            smokedY = -70
+        }
         withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
-            smokedY = -100
-            cravingY = -170
+            cravingY = -130
         }
     }
 }
