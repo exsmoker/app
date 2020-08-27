@@ -12,11 +12,13 @@ struct Triggers: View {
                 ScrollView {
                     ForEach(triggers, id: \.self) { item in
                         HStack {
-                            Spacer()
-                            Text(.init(item.first!.title))
+                            if item.count == 2 {
+                                Spacer()
+                            }
+                            Item(trigger: item.first!)
                             Spacer()
                             if item.count == 2 {
-                                Text(.init(item.last!.title))
+                                Item(trigger: item.last!)
                                 Spacer()
                             }
                         }.padding(.vertical, 6)
@@ -33,16 +35,34 @@ struct Triggers: View {
                                             .padding()
                                     })
             .onAppear {
-                triggers = stride(from: 0, to: Smoke.Trigger.allCases.count, by: 2).reduce(into: []) {
+                let all = Smoke.Trigger.allCases.shuffled()
+                triggers = stride(from: 0, to: all.count, by: 2).reduce(into: []) {
                     $0.append({
-                        var item = [Smoke.Trigger.allCases[$0]]
-                        if $0 + 1 < Smoke.Trigger.allCases.count {
-                            item.append(Smoke.Trigger.allCases[$0 + 1])
+                        var item = [all[$0]]
+                        if $0 + 1 < all.count {
+                            item.append(all[$0 + 1])
                         }
                         return item
                     } ($1))
                 }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+private struct Item: View {
+    let trigger: Smoke.Trigger
+    
+    var body: some View {
+        ZStack {
+            GeometryReader {
+                RoundedRectangle(cornerRadius: $0.size.height / 2)
+                    .foregroundColor(.init(.secondarySystemBackground))
+            }
+            Text(.init(trigger.title))
+                .foregroundColor(.primary)
+                .font(.footnote)
+                .padding()
+        }
     }
 }

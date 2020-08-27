@@ -50,11 +50,11 @@ struct Home: View {
                 Spacer()
                 ZStack {
                     if disclose {
-                        Control.Title(title: "Craving", background: .accentColor, width: 180) {
+                        Control.Title(title: "Craving", background: .purple, width: 180) {
                             event = .craving
                             hide()
                         }.offset(y: cravingY)
-                        Control.Title(title: "Smoked", background: .accentColor, width: 180) {
+                        Control.Title(title: "Smoked", background: .purple, width: 180) {
                             event = .smoked
                             hide()
                         }.offset(y: smokedY)
@@ -107,7 +107,6 @@ struct Home: View {
             smokedY = 0
             cravingY = 0
         }
-        
         withAnimation(Animation.linear(duration: 0.1).delay(0.1)) {
             disclose = false
         }

@@ -18,6 +18,17 @@ Craving = "Craving";
 Smoked = "Smoked";
 What.triggered = "What triggered it?";
 Cancel = "Cancel";
+Trigger.title.people = "People smoking";
+Trigger.title.offered = "Got offered";
+Trigger.title.bored = "Bored";
+Trigger.title.anxious = "Anxious";
+Trigger.title.nervous = "Nervous";
+Trigger.title.want = "Want to";
+Trigger.title.dont = "Don't know";
+Trigger.title.none = "No reason";
+Trigger.title.cold = "Cold";
+Trigger.title.tired = "Feel tired";
+
 "Greet.morning %@" = "Good morning, %@";
 "Greet.noon %@" = "Good day, %@";
 "Greet.afternoon %@" = "Good afternoon, %@";
