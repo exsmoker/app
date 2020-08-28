@@ -40,7 +40,7 @@ struct Triggers: View {
                     visible = nil
                 }) { _ in
                     if event == .craving {
-                        Circle()
+                        Craving(display: $trigger)
                     } else if event == .smoked {
                         Smoked(display: $trigger)
                     }
