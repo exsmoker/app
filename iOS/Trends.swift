@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Rankings: View {
+struct Trends: View {
     var body: some View {
         Circle()
     }

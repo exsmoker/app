@@ -12,14 +12,19 @@ struct Triggers: View {
                 ScrollView {
                     ForEach(triggers, id: \.self) { item in
                         HStack {
-                            if item.count == 2 {
-                                Spacer()
+                            Spacer()
+                            Item(trigger: item.first!) {
+                                
                             }
-                            Item(trigger: item.first!)
                             Spacer()
                             if item.count == 2 {
-                                Item(trigger: item.last!)
+                                Item(trigger: item.last!) {
+                                    
+                                }
                                 Spacer()
+                            } else {
+                                Spacer()
+                                    .frame(height: 20)
                             }
                         }.padding(.vertical, 6)
                     }
@@ -30,7 +35,6 @@ struct Triggers: View {
                                         visible = nil
                                     }) {
                                         Text("Cancel")
-                                            .font(.caption)
                                             .foregroundColor(.secondary)
                                             .padding()
                                     })
@@ -52,17 +56,20 @@ struct Triggers: View {
 
 private struct Item: View {
     let trigger: Smoke.Trigger
+    let action: () -> Void
     
     var body: some View {
-        ZStack {
-            GeometryReader {
-                RoundedRectangle(cornerRadius: $0.size.height / 2)
-                    .foregroundColor(.init(.secondarySystemBackground))
+        Button(action: action) {
+            ZStack {
+                GeometryReader {
+                    RoundedRectangle(cornerRadius: $0.size.height / 2)
+                        .foregroundColor(.accentColor)
+                }
+                Text(.init(trigger.title))
+                    .foregroundColor(.primary)
+                    .font(.footnote)
+                    .padding()
             }
-            Text(.init(trigger.title))
-                .foregroundColor(.primary)
-                .font(.footnote)
-                .padding()
-        }
+        }.accentColor(.purple)
     }
 }

@@ -10,15 +10,15 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "house.fill")
                 }.tag(0)
-            Cravings()
+            Stats()
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }.tag(1)
-            Rankings()
+            Cravings()
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                 }.tag(2)
-            Stats()
+            Trends()
                 .tabItem {
                     Image(systemName: "star.fill")
                 }.tag(3)

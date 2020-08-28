@@ -38,13 +38,72 @@ struct Home: View {
                     }) {
                         HStack {
                             Text("Stats")
+                            Image(systemName: "chart.bar.fill")
                             Image(systemName: "arrow.right")
                         }.foregroundColor(.secondary)
                         .padding()
                     }
                 }
-                Spacer()
-                    .frame(height: 100)
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            tab = 1
+                        }
+                    }) {
+                        HStack {
+                            Text("Stats")
+                            Image(systemName: "chart.bar.fill")
+                            Image(systemName: "arrow.right")
+                        }.foregroundColor(.secondary)
+                        .padding()
+                    }
+                }
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            tab = 2
+                        }
+                    }) {
+                        HStack {
+                            Text("Cravings")
+                            Image(systemName: "chart.pie.fill")
+                            Image(systemName: "arrow.right")
+                        }.foregroundColor(.secondary)
+                        .padding()
+                    }
+                }
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            tab = 3
+                        }
+                    }) {
+                        HStack {
+                            Text("Trends")
+                            Image(systemName: "star.fill")
+                            Image(systemName: "arrow.right")
+                        }.foregroundColor(.secondary)
+                        .padding()
+                    }
+                }
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            tab = 4
+                        }
+                    }) {
+                        HStack {
+                            Text("Settings")
+                            Image(systemName: "slider.horizontal.3")
+                            Image(systemName: "arrow.right")
+                        }.foregroundColor(.secondary)
+                        .padding()
+                    }
+                }
             }
             VStack {
                 Spacer()

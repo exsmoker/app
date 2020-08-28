@@ -13,7 +13,7 @@ final class Session: ObservableObject {
         var sub: AnyCancellable?
         sub = session.nodes(User.self).sink {
             if let user = $0.first {
-                sub = self.stats.nodes(Date.self).sink {
+                sub = self.stats.nodes(Smoke.Hit.self).sink {
                     self.smoke.hits = $0
                     self.user = user
                     sub?.cancel()
@@ -34,7 +34,7 @@ final class Session: ObservableObject {
         session.add(user)
         self.user = user
         
-        smoke.hits = [.init()]
+        smoke.hits = [.init(.none)]
         stats.add(smoke.hits.last!)
     }
 }
