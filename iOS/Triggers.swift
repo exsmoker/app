@@ -4,6 +4,7 @@ import Core
 struct Triggers: View {
     let event: Event
     @Binding var visible: Event?
+    @EnvironmentObject var session: Session
     @State private var trigger: Smoke.Trigger?
     @State private var triggers = [[Smoke.Trigger]]()
     
@@ -15,11 +16,17 @@ struct Triggers: View {
                         HStack {
                             Spacer()
                             Item(trigger: item.first!) {
+                                if event == .smoked {
+                                    session.smoked(.init(item.first!))
+                                }
                                 trigger = item.first!
                             }
                             Spacer()
                             if item.count == 2 {
                                 Item(trigger: item.last!) {
+                                    if event == .smoked {
+                                        session.smoked(.init(item.last!))
+                                    }
                                     trigger = item.last!
                                 }
                                 Spacer()
@@ -29,8 +36,14 @@ struct Triggers: View {
                             }
                         }.padding(.vertical, 6)
                     }
-                }.sheet(item: $trigger) { _ in
-                    Circle()
+                }.sheet(item: $trigger, onDismiss: {
+                    visible = nil
+                }) { _ in
+                    if event == .craving {
+                        Circle()
+                    } else if event == .smoked {
+                        Smoked(display: $trigger)
+                    }
                 }
             }.navigationBarTitle(.init(event.name), displayMode: .large)
             .navigationBarItems(trailing:

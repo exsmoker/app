@@ -137,6 +137,10 @@ struct Home: View {
             if $0 == 0 {
                 update()
             }
+        }.onChange(of: event) {
+            if $0 == nil {
+                update()
+            }
         }
     }
     
