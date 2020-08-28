@@ -4,6 +4,7 @@ import Core
 struct Triggers: View {
     let event: Event
     @Binding var visible: Event?
+    @State private var trigger: Smoke.Trigger?
     @State private var triggers = [[Smoke.Trigger]]()
     
     var body: some View {
@@ -14,12 +15,12 @@ struct Triggers: View {
                         HStack {
                             Spacer()
                             Item(trigger: item.first!) {
-                                
+                                trigger = item.first!
                             }
                             Spacer()
                             if item.count == 2 {
                                 Item(trigger: item.last!) {
-                                    
+                                    trigger = item.last!
                                 }
                                 Spacer()
                             } else {
@@ -28,6 +29,8 @@ struct Triggers: View {
                             }
                         }.padding(.vertical, 6)
                     }
+                }.sheet(item: $trigger) { _ in
+                    Circle()
                 }
             }.navigationBarTitle(.init(event.name), displayMode: .large)
             .navigationBarItems(trailing:
