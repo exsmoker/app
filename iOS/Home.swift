@@ -48,21 +48,6 @@ struct Home: View {
                     Spacer()
                     Button(action: {
                         withAnimation {
-                            tab = 1
-                        }
-                    }) {
-                        HStack {
-                            Text("Stats")
-                            Image(systemName: "chart.bar.fill")
-                            Image(systemName: "arrow.right")
-                        }.foregroundColor(.secondary)
-                        .padding()
-                    }
-                }
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        withAnimation {
                             tab = 2
                         }
                     }) {
