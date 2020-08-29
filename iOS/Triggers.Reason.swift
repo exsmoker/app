@@ -4,7 +4,7 @@ import Core
 extension Triggers {
     struct Reason: View {
         let reason: Core.Reason
-        @Binding var display: Core.Reason?
+        @Binding var visible: Core.Reason?
         
         var body: some View {
             NavigationView {
@@ -33,7 +33,7 @@ extension Triggers {
                     }
                 }.navigationBarItems(trailing:
                                         Button(action: {
-                                            display = nil
+                                            visible = nil
                                         }) {
                                             Text("Close")
                                                 .foregroundColor(.secondary)

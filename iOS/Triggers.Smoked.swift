@@ -3,7 +3,7 @@ import Core
 
 extension Triggers {
     struct Smoked: View {
-        @Binding var display: Smoke.Trigger?
+        @Binding var visible: Smoke.Trigger?
         
         var body: some View {
             VStack {
@@ -23,7 +23,7 @@ extension Triggers {
                 }
                 Spacer()
                 Control.Title(title: "Continue", background: .accentColor, width: 190) {
-                    display = nil
+                    visible = nil
                 }
                 Spacer()
                     .frame(height: 20)

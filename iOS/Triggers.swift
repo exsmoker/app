@@ -41,9 +41,9 @@ struct Triggers: View {
                     visible = nil
                 }) { _ in
                     if event == .craving {
-                        Craving(display: $trigger)
+                        Craving(visible: $trigger)
                     } else if event == .smoked {
-                        Smoked(display: $trigger)
+                        Smoked(visible: $trigger)
                     }
                 }
             }.navigationBarTitle(.init(event.name), displayMode: .large)

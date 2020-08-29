@@ -5,7 +5,7 @@ extension Triggers {
     struct Craving: View {
         @State private var reason: Core.Reason?
         @State private var reasons = [[Core.Reason]]()
-        @Binding var display: Smoke.Trigger?
+        @Binding var visible: Smoke.Trigger?
         
         var body: some View {
             NavigationView {
@@ -49,26 +49,27 @@ extension Triggers {
                     }
                 }.navigationBarItems(trailing:
                                         Button(action: {
-                                            display = nil
+                                            visible = nil
                                         }) {
                                             Text("Not.interested")
                                                 .foregroundColor(.secondary)
                                                 .padding()
                                         })
                 .onAppear {
-                        self.reasons = stride(from: 0, to: Core.Reason.allCases.count, by: 2).reduce(into: []) {
-                            $0.append({
-                                var item = [Core.Reason.allCases[$0]]
-                                if $0 + 1 < Core.Reason.allCases.count {
-                                    item.append(Core.Reason.allCases[$0 + 1])
-                                }
-                                return item
-                            } ($1))
-                        }
+                    let all = Core.Reason.allCases.shuffled()
+                    self.reasons = stride(from: 0, to: all.count, by: 2).reduce(into: []) {
+                        $0.append({
+                            var item = [all[$0]]
+                            if $0 + 1 < all.count {
+                                item.append(all[$0 + 1])
+                            }
+                            return item
+                        } ($1))
+                    }
                 }.sheet(item: $reason, onDismiss: {
-                    display = nil
+                    visible = nil
                 }) {
-                    Reason(reason: $0, display: $reason)
+                    Reason(reason: $0, visible: $reason)
                 }
             }.navigationViewStyle(StackNavigationViewStyle())
         }
