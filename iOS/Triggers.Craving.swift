@@ -67,7 +67,9 @@ extension Triggers {
                         } ($1))
                     }
                 }.sheet(item: $reason, onDismiss: {
-                    visible = nil
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                        visible = nil
+                    }
                 }) {
                     Reason(reason: $0, visible: $reason)
                 }
