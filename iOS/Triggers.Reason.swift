@@ -7,32 +7,39 @@ extension Triggers {
         @Binding var display: Core.Reason?
         
         var body: some View {
-            ScrollView {
-                Spacer()
-                    .frame(height: 30)
-                HStack {
-                    Text(.init(reason.title))
-                        .bold()
-                        .padding(.leading)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                HStack {
-                    Text(.init(reason.subtitle))
-                        .font(Font.title.bold())
-                        .padding(.leading)
-                        .foregroundColor(.pink)
-                    Spacer()
-                }
-                Image(reason.image)
-                    .padding()
-                HStack {
-                    Text(.init(reason.description))
-                        .fixedSize(horizontal: false, vertical: true)
+            NavigationView {
+                ScrollView {
+                    Image(reason.image)
                         .padding()
-                    Spacer()
-                }
-            }
+                    HStack {
+                        Text(.init(reason.category.name))
+                            .font(Font.footnote.bold())
+                            .padding(.leading)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(.init(reason.name))
+                            .font(Font.title.bold())
+                            .padding(.leading)
+                            .foregroundColor(.pink)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(.init(reason.description))
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal)
+                        Spacer()
+                    }
+                }.navigationBarItems(trailing:
+                                        Button(action: {
+                                            display = nil
+                                        }) {
+                                            Text("Close")
+                                                .foregroundColor(.secondary)
+                                                .padding()
+                                        })
+            }.navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

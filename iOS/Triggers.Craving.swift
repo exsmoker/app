@@ -93,14 +93,14 @@ private struct Item: View {
                         .frame(width: 60, height: 60)
                         .padding(.bottom)
                     HStack {
-                        Text(.init(reason.title))
+                        Text(.init(reason.category.name))
                             .font(.footnote)
                             .foregroundColor(.secondary)
                             .padding(.leading)
                         Spacer()
                     }
                     HStack {
-                        Text(.init(reason.subtitle))
+                        Text(.init(reason.name))
                             .font(.headline)
                             .foregroundColor(.secondary)
                             .padding(.leading)
