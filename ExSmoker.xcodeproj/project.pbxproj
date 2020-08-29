@@ -47,6 +47,7 @@
 		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A224F13F0A00BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE779CE124F41B6E00CFE9BC /* Control.Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */; };
+		CEA06E8224FA7504007F7BD6 /* Triggers.Reason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA06E8124FA7504007F7BD6 /* Triggers.Reason.swift */; };
 		CEB58F4C24F91CE400F28720 /* Triggers.Craving.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB58F4B24F91CE400F28720 /* Triggers.Craving.swift */; };
 		CEB58F4E24F9243600F28720 /* Triggers.Smoked.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB58F4D24F9243600F28720 /* Triggers.Smoked.swift */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,7 @@
 		CE31F0AA24F2B95500AADA52 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Circle.swift; sourceTree = "<group>"; };
+		CEA06E8124FA7504007F7BD6 /* Triggers.Reason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.Reason.swift; sourceTree = "<group>"; };
 		CEB58F4B24F91CE400F28720 /* Triggers.Craving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.Craving.swift; sourceTree = "<group>"; };
 		CEB58F4D24F9243600F28720 /* Triggers.Smoked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.Smoked.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				CE21514F24F5641D0033242B /* Trends.swift */,
 				CEB58F4B24F91CE400F28720 /* Triggers.Craving.swift */,
 				CE0A43D224F6B83E008FDD62 /* Triggers.Event.swift */,
+				CEA06E8124FA7504007F7BD6 /* Triggers.Reason.swift */,
 				CEB58F4D24F9243600F28720 /* Triggers.Smoked.swift */,
 				CE0A43D024F6B794008FDD62 /* Triggers.swift */,
 				CE0E6A7624F13967007A9072 /* Assets.xcassets */,
@@ -444,6 +447,7 @@
 				CE31F0A924F2B91C00AADA52 /* Control.Title.swift in Sources */,
 				CE21514E24F563750033242B /* Cravings.swift in Sources */,
 				CE0A43D324F6B83E008FDD62 /* Triggers.Event.swift in Sources */,
+				CEA06E8224FA7504007F7BD6 /* Triggers.Reason.swift in Sources */,
 				CE21515024F5641D0033242B /* Trends.swift in Sources */,
 				CE21514C24F5636B0033242B /* Stats.swift in Sources */,
 				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,

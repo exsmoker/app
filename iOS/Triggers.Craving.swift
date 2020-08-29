@@ -3,8 +3,8 @@ import Core
 
 extension Triggers {
     struct Craving: View {
-        @State private var reason: Reason?
-        @State private var reasons = [[Reason]]()
+        @State private var reason: Core.Reason?
+        @State private var reasons = [[Core.Reason]]()
         @Binding var display: Smoke.Trigger?
         
         var body: some View {
@@ -27,7 +27,7 @@ extension Triggers {
                         Spacer()
                             .frame(height: 30)
                         Control.Title(title: "Gime.me.any", background: .accentColor, width: 200) {
-                            
+                            reason = reasons.last?.last
                         }
                         Spacer()
                             .frame(height: 30)
@@ -56,17 +56,19 @@ extension Triggers {
                                                 .padding()
                                         })
                 .onAppear {
-                        self.reasons = stride(from: 0, to: Reason.allCases.count, by: 2).reduce(into: []) {
+                        self.reasons = stride(from: 0, to: Core.Reason.allCases.count, by: 2).reduce(into: []) {
                             $0.append({
-                                var item = [Reason.allCases[$0]]
-                                if $0 + 1 < Reason.allCases.count {
-                                    item.append(Reason.allCases[$0 + 1])
+                                var item = [Core.Reason.allCases[$0]]
+                                if $0 + 1 < Core.Reason.allCases.count {
+                                    item.append(Core.Reason.allCases[$0 + 1])
                                 }
                                 return item
                             } ($1))
                         }
-                }.sheet(item: $reason) { _ in
-                    Circle()
+                }.sheet(item: $reason, onDismiss: {
+                    display = nil
+                }) {
+                    Reason(reason: $0, display: $reason)
                 }
             }.navigationViewStyle(StackNavigationViewStyle())
         }
@@ -74,7 +76,7 @@ extension Triggers {
 }
 
 private struct Item: View {
-    let reason: Reason
+    let reason: Core.Reason
     let width: CGFloat
     let action: () -> Void
     

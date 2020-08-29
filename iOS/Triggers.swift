@@ -22,6 +22,7 @@ struct Triggers: View {
                                 trigger = item.first!
                             }
                             Spacer()
+                                .frame(width: 14)
                             if item.count == 2 {
                                 Item(trigger: item.last!) {
                                     if event == .smoked {
@@ -78,14 +79,15 @@ private struct Item: View {
         Button(action: action) {
             ZStack {
                 GeometryReader {
-                    RoundedRectangle(cornerRadius: $0.size.height / 2)
-                        .foregroundColor(.accentColor)
+                    RoundedRectangle(cornerRadius: $0.size.height / 3)
+                        .shadow(color: .accentColor, radius: 2, x: -0.5, y: -0.5)
+                        .shadow(color: .accentColor, radius: 2, x: 1, y: 1)
                 }
                 Text(.init(trigger.title))
                     .foregroundColor(.primary)
-                    .font(.footnote)
+                    .font(Font.footnote.bold())
                     .padding()
             }
-        }.accentColor(.purple)
+        }.accentColor(.pink)
     }
 }
