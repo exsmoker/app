@@ -25,10 +25,12 @@ private struct Grid: View {
             .fill(Color.accentColor.opacity(0.3))
         Road(values: values)
             .stroke(Color.accentColor, style: .init(lineWidth: 2, lineCap: .round))
-        Dots(values: values)
-            .fill(Color.accentColor)
-        Dots(values: values)
-            .stroke(Color.primary, style: .init(lineWidth: 2, lineCap: .round))
+        ForEach(0 ..< values.count) {
+            Dot(values: values, index: $0)
+                .fill(Color.accentColor)
+            Dot(values: values, index: $0)
+                .stroke(Color.primary, style: .init(lineWidth: 2, lineCap: .round))
+        }
     }
 }
 
@@ -105,19 +107,13 @@ private struct Road: Shape {
     }
 }
 
-private struct Dots: Shape {
+private struct Dot: Shape {
     var values: [CGFloat]
+    let index: Int
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        if !values.isEmpty {
-            values.enumerated().map {
-                CGPoint(x: rect.maxX / .init(values.count - 1) * .init($0.0), y: rect.maxY - (rect.maxY * $0.1))
-            }.forEach {
-                path.addArc(center: $0, radius: 5, startAngle: .zero, endAngle: .init(radians: .pi * 2), clockwise: true)
-                path.closeSubpath()
-            }
-        }
+        path.addArc(center: .init(x: rect.maxX / .init(values.count - 1) * .init(index), y: rect.maxY - (rect.maxY * values[index])), radius: 5, startAngle: .zero, endAngle: .init(radians: .pi * 2), clockwise: true)
         return path
     }
     
