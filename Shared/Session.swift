@@ -14,11 +14,7 @@ final class Session: ObservableObject {
         sub = session.nodes(User.self).sink {
             if let user = $0.first {
                 sub = self.info.nodes(Smoke.Info.self).sink {
-                    if let info = $0.first {
-                        self.smoke.info = info
-                    } else {
-                        self.info.add(self.smoke.info)
-                    }
+                    self.smoke.info = $0.first!
                     self.user = user
                     sub?.cancel()
                 }
@@ -39,7 +35,7 @@ final class Session: ObservableObject {
         self.user = user
         
         smoke.info.hits = [.init(.none)]
-        info.update(smoke.info)
+        info.add(smoke.info)
     }
     
     func smoked(_ hit: Smoke.Hit) {
