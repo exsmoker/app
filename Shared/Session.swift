@@ -7,14 +7,18 @@ final class Session: ObservableObject {
     @Published private(set) var user: User!
     let smoke = Smoke()
     private let session = Balam("Session")
-    private let stats = Balam("Stats")
+    private let info = Balam("Info")
     
     func load() {
         var sub: AnyCancellable?
         sub = session.nodes(User.self).sink {
             if let user = $0.first {
-                sub = self.stats.nodes(Smoke.Hit.self).sink {
-                    self.smoke.hits = $0.sorted { $0.date < $1.date }
+                sub = self.info.nodes(Smoke.Info.self).sink {
+                    if let info = $0.first {
+                        self.smoke.info = info
+                    } else {
+                        self.info.add(self.smoke.info)
+                    }
                     self.user = user
                     sub?.cancel()
                 }
@@ -34,12 +38,12 @@ final class Session: ObservableObject {
         session.add(user)
         self.user = user
         
-        smoke.hits = [.init(.none)]
-        stats.add(smoke.hits.last!)
+        smoke.info.hits = [.init(.none)]
+        info.update(smoke.info)
     }
     
     func smoked(_ hit: Smoke.Hit) {
-        smoke.hits.append(hit)
-        stats.add(hit)
+        smoke.info.hits.append(hit)
+        info.update(smoke.info)
     }
 }
