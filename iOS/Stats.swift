@@ -14,6 +14,8 @@ struct Stats: View {
                     Spacer()
                 }
                 Chart()
+                Chart()
+                Chart()
             }
         }.navigationBarTitle("Stats", displayMode: .large)
     }
