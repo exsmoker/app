@@ -3,11 +3,29 @@ import SwiftUI
 extension Stats {
     struct Chart: View {
         let values: [CGFloat]
+        let title: LocalizedStringKey
+        let subtitle: LocalizedStringKey
         
         var body: some View {
             ZStack {
                 Grid(values: values)
-            }.frame(height: 120)
+                    .padding(.vertical, 30)
+                VStack {
+                    HStack {
+                        Text(title)
+                            .font(Font.body.bold())
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Text(subtitle)
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                }
+            }.frame(height: 200)
             .padding()
         }
     }

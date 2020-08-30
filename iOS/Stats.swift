@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct Stats: View {
+    @State private var range = 0
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -13,9 +15,25 @@ struct Stats: View {
                         .padding()
                     Spacer()
                 }
-                Chart(values: [0.4, 0.3, 0.4, 1, 0.3])
-                Chart(values: [])
-                Chart(values: [])
+                Picker("", selection: $currency) {
+                    Text(verbatim: "$")
+                        .bold()
+                        .tag(User.Currency.dollar)
+                    Text(verbatim: "€")
+                        .bold()
+                        .tag(User.Currency.euro)
+                    Text(verbatim: "£")
+                        .tag(User.Currency.pound)
+                }.pickerStyle(SegmentedPickerStyle())
+                    .labelsHidden()
+                    .padding()
+                Chart(values: [0.4, 0.3, 0.4, 1, 0.3], title: "Cigarettes", subtitle: "Over the last")
+                Spacer()
+                    .frame(height: 40)
+                Chart(values: [], title: "", subtitle: "")
+                Spacer()
+                    .frame(height: 40)
+                Chart(values: [], title: "", subtitle: "")
             }
         }.navigationBarTitle("Stats", displayMode: .large)
     }
