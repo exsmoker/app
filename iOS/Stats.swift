@@ -13,9 +13,9 @@ struct Stats: View {
                         .padding()
                     Spacer()
                 }
-                Chart()
-                Chart()
-                Chart()
+                Chart(values: [0.4, 0.3, 0.4, 1, 0.3])
+                Chart(values: [])
+                Chart(values: [])
             }
         }.navigationBarTitle("Stats", displayMode: .large)
     }
