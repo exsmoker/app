@@ -2,9 +2,9 @@ import SwiftUI
 import Core
 
 struct Triggers: View {
+    @EnvironmentObject var session: Session
     let event: Event
     @Binding var visible: Event?
-    @EnvironmentObject var session: Session
     @State private var trigger: Smoke.Trigger?
     @State private var triggers = [[Smoke.Trigger]]()
     

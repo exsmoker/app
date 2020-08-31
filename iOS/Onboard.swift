@@ -226,6 +226,7 @@ private struct Fourth: View {
                     .bold()
                     .tag(User.Currency.euro)
                 Text(verbatim: "£")
+                    .bold()
                     .tag(User.Currency.pound)
             }.pickerStyle(SegmentedPickerStyle())
                 .labelsHidden()
