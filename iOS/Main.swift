@@ -10,7 +10,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "house.fill")
                 }.tag(0)
-            Stats()
+            Stats(tab: $selected)
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }.tag(1)

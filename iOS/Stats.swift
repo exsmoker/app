@@ -3,6 +3,7 @@ import Core
 
 struct Stats: View {
     @EnvironmentObject var session: Session
+    @Binding var tab: Int
     @State private var range = Smoke.Range.days
     @State private var cigarettes = [CGFloat]()
     
@@ -35,6 +36,11 @@ struct Stats: View {
         }.navigationBarTitle("Stats", displayMode: .large)
         .onAppear {
             update(range)
+        }
+        .onChange(of: tab) {
+            if $0 == 1 {
+                update(range)
+            }
         }
         .onChange(of: range, perform: update)
     }
