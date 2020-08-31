@@ -3,13 +3,13 @@ import Core
 
 extension Stats {
     struct Chart: View {
-        @Binding var values: [CGFloat]
-        let title: LocalizedStringKey
         @Binding var range: Smoke.Range
+        let title: LocalizedStringKey
+        let values: [CGFloat]
         
         var body: some View {
             ZStack {
-                Grid(values: $values)
+                Grid(values: values)
                     .padding(.vertical, 30)
                 VStack {
                     HStack {
@@ -36,14 +36,14 @@ extension Stats {
 }
 
 private struct Grid: View {
-    @Binding var values: [CGFloat]
+    let values: [CGFloat]
     
     var body: some View {
         Base()
             .stroke(Color.secondary, style: .init(lineWidth: 1, lineCap: .round))
         Pattern()
             .stroke(Color.secondary, style: .init(lineWidth: 1, lineCap: .round, dash: [1, 4]))
-        Shade(values: $values)
+        Shade(values: values)
             .fill(Color.accentColor.opacity(0.3))
         Road(values: values)
             .stroke(Color.accentColor, style: .init(lineWidth: 2, lineCap: .round))
@@ -85,7 +85,7 @@ private struct Pattern: Shape {
 }
 
 private struct Shade: Shape {
-    @Binding var values: [CGFloat]
+    let values: [CGFloat]
     
     func path(in rect: CGRect) -> Path {
         .init {
@@ -100,18 +100,13 @@ private struct Shade: Shape {
             }
         }
     }
-    
-    var animatableData: [CGFloat] {
-        get { values }
-        set { values = newValue }
-    }
 }
 
 private struct Road: Shape {
-    var values: [CGFloat]
+    let values: [CGFloat]
     
     func path(in rect: CGRect) -> Path {
-        Path {
+        .init {
             $0.move(to: .init(x: 0, y: rect.maxY))
             if !values.isEmpty {
                 $0.addLines(values.enumerated().map {
@@ -122,15 +117,10 @@ private struct Road: Shape {
             }
         }
     }
-    
-    var animatableData: Path.AnimatableData {
-        get { values }
-        set { values = newValue }
-    }
 }
 
 private struct Dot: Shape {
-    var y: CGFloat
+    let y: CGFloat
     let index: Int
     let count: Int
     
@@ -138,10 +128,5 @@ private struct Dot: Shape {
         .init {
             $0.addArc(center: .init(x: rect.maxX / .init(count - 1) * .init(index), y: rect.maxY - (rect.maxY * y)), radius: 5, startAngle: .zero, endAngle: .init(radians: .pi * 2), clockwise: true)
         }
-    }
-    
-    var animatableData: CGFloat {
-        get { y }
-        set { y = newValue }
     }
 }

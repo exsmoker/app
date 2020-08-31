@@ -28,7 +28,7 @@ struct Stats: View {
                 }.pickerStyle(SegmentedPickerStyle())
                     .labelsHidden()
                     .padding()
-                Chart(values: $cigarettes, title: "Cigarettes", range: $range)
+                Chart(range: $range, title: "Cigarettes", values: cigarettes)
                 Spacer()
                     .frame(height: 40)
             }
