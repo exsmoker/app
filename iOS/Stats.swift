@@ -30,6 +30,9 @@ struct Stats: View {
                     .labelsHidden()
                     .padding()
                 Chart(range: $range, title: "Cigarettes", values: cigarettes)
+                    .accentColor(.purple)
+                Chart(range: $range, title: "Cravings", values: cigarettes)
+                    .accentColor(.pink)
                 Spacer()
                     .frame(height: 40)
             }
