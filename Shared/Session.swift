@@ -42,4 +42,9 @@ final class Session: ObservableObject {
         smoke.info.hits.append(hit)
         info.update(smoke.info)
     }
+    
+    func craving(_ craving: Smoke.Craving) {
+        smoke.info.cravings.append(craving)
+        info.update(smoke.info)
+    }
 }

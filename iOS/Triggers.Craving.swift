@@ -3,6 +3,7 @@ import Core
 
 extension Triggers {
     struct Craving: View {
+        @EnvironmentObject var session: Session
         @State private var reason: Core.Reason?
         @State private var reasons = [[Core.Reason]]()
         @Binding var visible: Smoke.Trigger?
@@ -27,20 +28,23 @@ extension Triggers {
                         Spacer()
                             .frame(height: 30)
                         Control.Title(title: "Gime.me.any", background: .accentColor, width: 200) {
-                            reason = reasons.last?.last
+                            session.craving(.init(reasons.last!.last))
+                            reason = reasons.last!.last
                         }
                         Spacer()
                             .frame(height: 30)
-                        ForEach(self.reasons, id: \.self) { item in
+                        ForEach(reasons, id: \.self) { item in
                             HStack {
                                 Spacer()
                                 Item(reason: item.first!, width: geo.size.width / 2.4) {
-                                    self.reason = item.first
+                                    session.craving(.init(item.first!))
+                                    reason = item.first
                                 }
                                 Spacer()
                                 if item.count == 2 {
                                     Item(reason: item.last!, width: geo.size.width / 2.4) {
-                                        self.reason = item.last
+                                        session.craving(.init(item.last!))
+                                        reason = item.last
                                     }
                                     Spacer()
                                 }
@@ -49,6 +53,7 @@ extension Triggers {
                     }
                 }.navigationBarItems(trailing:
                                         Button(action: {
+                                            session.craving(.init(nil))
                                             visible = nil
                                         }) {
                                             Text("Not.interested")
@@ -57,7 +62,7 @@ extension Triggers {
                                         })
                 .onAppear {
                     let all = Core.Reason.allCases.shuffled()
-                    self.reasons = stride(from: 0, to: all.count, by: 2).reduce(into: []) {
+                    reasons = stride(from: 0, to: all.count, by: 2).reduce(into: []) {
                         $0.append({
                             var item = [all[$0]]
                             if $0 + 1 < all.count {
