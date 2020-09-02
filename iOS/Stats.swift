@@ -7,17 +7,35 @@ struct Stats: View {
     @State private var range = Smoke.Range.days
     @State private var cigarettes = [CGFloat]()
     @State private var cravings = [CGFloat]()
+    @State private var savings = ""
     
     var body: some View {
         ScrollView {
             VStack {
                 Spacer()
-                    .frame(height: 10)
+                    .frame(height: 20)
                 HStack {
                     Text("Stats")
                         .font(Font.title.bold())
                         .foregroundColor(.secondary)
                         .padding()
+                    Spacer()
+                }
+                HStack {
+                    Text("General")
+                        .font(Font.callout.bold())
+                        .foregroundColor(.init(.tertiaryLabel))
+                        .padding(.horizontal)
+                    Spacer()
+                }
+                Counter(title: "Savings", value: savings)
+                Spacer()
+                    .frame(height: 20)
+                HStack {
+                    Text("Timeline")
+                        .font(Font.callout.bold())
+                        .foregroundColor(.init(.tertiaryLabel))
+                        .padding(.horizontal)
                     Spacer()
                 }
                 Picker("", selection: $range) {
@@ -35,7 +53,7 @@ struct Stats: View {
                 Chart(range: $range, title: "Cravings", values: cravings)
                     .accentColor(.pink)
                 Spacer()
-                    .frame(height: 40)
+                    .frame(height: 60)
             }
         }.navigationBarTitle("Stats", displayMode: .large)
         .onAppear {
@@ -54,5 +72,33 @@ struct Stats: View {
             cigarettes = session.smoke.cigarettes(range).map { .init($0) }
             cravings = session.smoke.cravings(range).map { .init($0) }
         }
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = session.user.currency.symbol
+        savings = formatter.string(from: .init(value: 2131.30))!
+    }
+}
+
+private struct Counter: View {
+    let title: LocalizedStringKey
+    let value: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(.init(.secondarySystemBackground))
+                .frame(height: 60)
+            HStack {
+                Text(title)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .padding()
+                Spacer()
+                Text(verbatim: value)
+                    .bold()
+                    .foregroundColor(.accentColor)
+                    .padding()
+            }
+        }.padding()
     }
 }
