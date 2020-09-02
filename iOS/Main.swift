@@ -14,7 +14,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }.tag(1)
-            Cravings()
+            Reasons()
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                 }.tag(2)

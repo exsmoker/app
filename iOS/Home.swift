@@ -52,7 +52,7 @@ struct Home: View {
                         }
                     }) {
                         HStack {
-                            Text("Cravings")
+                            Text("Reasons")
                             Image(systemName: "chart.pie.fill")
                             Image(systemName: "arrow.right")
                         }.foregroundColor(.secondary)

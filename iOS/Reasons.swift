@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Cravings: View {
+struct Reasons: View {
     var body: some View {
         Circle()
     }
