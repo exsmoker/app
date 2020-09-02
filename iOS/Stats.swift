@@ -6,6 +6,7 @@ struct Stats: View {
     @Binding var tab: Int
     @State private var range = Smoke.Range.days
     @State private var cigarettes = [CGFloat]()
+    @State private var cravings = [CGFloat]()
     
     var body: some View {
         ScrollView {
@@ -31,7 +32,7 @@ struct Stats: View {
                     .padding()
                 Chart(range: $range, title: "Cigarettes", values: cigarettes)
                     .accentColor(.purple)
-                Chart(range: $range, title: "Cravings", values: cigarettes)
+                Chart(range: $range, title: "Cravings", values: cravings)
                     .accentColor(.pink)
                 Spacer()
                     .frame(height: 40)
@@ -51,6 +52,7 @@ struct Stats: View {
     private func update(_ range: Smoke.Range) {
         withAnimation(.easeInOut) {
             cigarettes = session.smoke.cigarettes(range).map { .init($0) }
+            cravings = session.smoke.cravings(range).map { .init($0) }
         }
     }
 }

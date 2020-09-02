@@ -34,7 +34,6 @@ final class Session: ObservableObject {
         session.add(user)
         self.user = user
         
-        smoke.info.hits = [.init(.none)]
         info.add(smoke.info)
     }
     

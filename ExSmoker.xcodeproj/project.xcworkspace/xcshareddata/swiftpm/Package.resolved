@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/catverse/balam",
         "state": {
           "branch": "master",
-          "revision": "d3be40eec44f3d725ceeef0f913d567740133855",
+          "revision": "8cace2cac937e792c18531e088a4b5ddbc3ee111",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/exsmoker/core.git",
         "state": {
           "branch": "main",
-          "revision": "9d6c8b6ca91c78ebe9f222d4974dfdda6d4446ed",
+          "revision": "5d37ac2266f34d64fda6f26650a0526d744b0912",
           "version": null
         }
       }
