@@ -11,60 +11,55 @@ struct Stats: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                Spacer()
-                    .frame(height: 20)
-                HStack {
-                    Text("Stats")
-                        .font(Font.title.bold())
-                        .foregroundColor(.secondary)
-                        .padding()
-                    Spacer()
-                }
-                HStack {
-                    Text("General")
-                        .font(Font.callout.bold())
-                        .foregroundColor(.init(.tertiaryLabel))
-                        .padding(.horizontal)
-                    Spacer()
-                }
-                Counter(title: "Savings", value: savings)
-                Spacer()
-                    .frame(height: 20)
-                HStack {
-                    Text("Timeline")
-                        .font(Font.callout.bold())
-                        .foregroundColor(.init(.tertiaryLabel))
-                        .padding(.horizontal)
-                    Spacer()
-                }
-                Picker("", selection: $range) {
-                    Text(.init(Smoke.Range.hours.title))
-                        .tag(Smoke.Range.hours)
-                    Text(.init(Smoke.Range.days.title))
-                        .tag(Smoke.Range.days)
-                    Text(.init(Smoke.Range.weeks.title))
-                        .tag(Smoke.Range.weeks)
-                }.pickerStyle(SegmentedPickerStyle())
-                    .labelsHidden()
+            Spacer()
+                .frame(height: 20)
+            HStack {
+                Text("Stats")
+                    .font(Font.title.bold())
+                    .foregroundColor(.secondary)
                     .padding()
-                Chart(range: $range, title: "Cigarettes", values: cigarettes)
-                    .accentColor(.purple)
-                Chart(range: $range, title: "Cravings", values: cravings)
-                    .accentColor(.pink)
                 Spacer()
-                    .frame(height: 60)
             }
-        }.navigationBarTitle("Stats", displayMode: .large)
-        .onAppear {
+            HStack {
+                Text("General")
+                    .font(Font.callout.bold())
+                    .foregroundColor(.init(.tertiaryLabel))
+                    .padding(.horizontal)
+                Spacer()
+            }
+            Counter(title: "Savings", value: savings)
+            Spacer()
+                .frame(height: 20)
+            HStack {
+                Text("Timeline")
+                    .font(Font.callout.bold())
+                    .foregroundColor(.init(.tertiaryLabel))
+                    .padding(.horizontal)
+                Spacer()
+            }
+            Picker("", selection: $range) {
+                Text(.init(Smoke.Range.hours.title))
+                    .tag(Smoke.Range.hours)
+                Text(.init(Smoke.Range.days.title))
+                    .tag(Smoke.Range.days)
+                Text(.init(Smoke.Range.weeks.title))
+                    .tag(Smoke.Range.weeks)
+            }.pickerStyle(SegmentedPickerStyle())
+                .labelsHidden()
+                .padding()
+            Chart(range: $range, title: "Cigarettes", values: cigarettes)
+                .accentColor(.purple)
+            Chart(range: $range, title: "Cravings", values: cravings)
+                .accentColor(.pink)
+            Spacer()
+                .frame(height: 60)
+        }.onAppear {
             update(range)
-        }
-        .onChange(of: tab) {
+        }.onChange(of: tab) {
             if $0 == 1 {
                 update(range)
             }
-        }
-        .onChange(of: range, perform: update)
+        }.onChange(of: range, perform: update)
     }
     
     private func update(_ range: Smoke.Range) {

@@ -14,7 +14,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }.tag(1)
-            Reasons()
+            Reasons(tab: $selected)
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                 }.tag(2)
