@@ -6,6 +6,7 @@ extension Triggers {
         @EnvironmentObject var session: Session
         @State private var reason: Core.Reason?
         @State private var reasons = [[Core.Reason]]()
+        @State private var cancelable = true
         @Binding var visible: Smoke.Trigger?
         
         var body: some View {
@@ -53,8 +54,10 @@ extension Triggers {
                     }
                 }.navigationBarItems(trailing:
                                         Button(action: {
-                                            session.craving(.init(nil))
-                                            visible = nil
+                                            if cancelable {
+                                                session.craving(.init(nil))
+                                                visible = nil
+                                            }
                                         }) {
                                             Text("Not.interested")
                                                 .foregroundColor(.secondary)
@@ -72,6 +75,7 @@ extension Triggers {
                         } ($1))
                     }
                 }.sheet(item: $reason, onDismiss: {
+                    cancelable = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                         visible = nil
                     }
