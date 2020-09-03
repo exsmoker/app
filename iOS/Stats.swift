@@ -75,7 +75,7 @@ struct Stats: View {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = session.user.currency.symbol
-        savings = formatter.string(from: .init(value: 2131.30))!
+        savings = formatter.string(from: .init(value: session.smoke.savings(session.user)))!
     }
 }
 
