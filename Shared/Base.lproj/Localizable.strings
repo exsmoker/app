@@ -34,6 +34,7 @@ Reasons = "Reasons";
 Savings = "Savings";
 General = "General";
 Timeline = "Timeline";
+Interesting.rate = "Interesting rate";
 Range.title.hours = "Hours";
 Range.title.days = "Days";
 Range.title.weeks = "Weeks";

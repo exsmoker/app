@@ -85,7 +85,6 @@ private struct Counter: View {
                 .frame(height: 60)
             HStack {
                 Text(title)
-                    .font(.caption)
                     .foregroundColor(.secondary)
                     .padding()
                 Spacer()
