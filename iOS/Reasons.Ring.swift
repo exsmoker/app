@@ -6,15 +6,17 @@ extension Reasons {
         
         var body: some View {
             ZStack {
+                Ringin(percent: 1)
+                    .fill(Color.accentColor.opacity(0.6))
                 Ringin(percent: percent)
-                    .fill(Color.accentColor.opacity(0.3))
+                    .fill(Color.accentColor)
                 Path {
                     $0.addArc(center: .init(x: 80, y: 80),
                         radius: 78,
                         startAngle: .init(degrees: 0),
                         endAngle: .init(degrees: 360),
                         clockwise: false)
-                }.stroke(Color.accentColor, style: .init(lineWidth: 4, lineCap: .round))
+                }.stroke(Color.accentColor.opacity(0.3), style: .init(lineWidth: 1, lineCap: .round))
                 Path {
                     $0.addArc(center: .init(x: 80, y: 80),
                         radius: 50,
@@ -23,14 +25,18 @@ extension Reasons {
                         clockwise: false)
                 }.foregroundColor(.init(.systemBackground))
                 HStack {
-                    Spacer()
                     Text("\(Int(percent * 100))")
                         .font(Font.title.bold())
                         .foregroundColor(.accentColor)
+                        .animation(.none)
+                        .padding(0)
+                        .offset(x: 3)
                     Text("%")
                         .foregroundColor(.accentColor)
                         .font(.footnote)
-                    Spacer()
+                        .animation(.none)
+                        .padding(0)
+                        .offset(x: -3)
                 }
             }.frame(width: 160, height: 160)
                 .padding(.init(top: 10, leading: 0, bottom: 30, trailing: 0))

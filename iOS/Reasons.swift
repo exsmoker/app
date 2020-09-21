@@ -24,8 +24,6 @@ struct Reasons: View {
                 Spacer()
             }
             Ring(percent: $percent)
-        }.onAppear {
-            update()
         }.onChange(of: tab) {
             if $0 == 2 {
                 update()
@@ -34,6 +32,9 @@ struct Reasons: View {
     }
     
     private func update() {
-        percent = session.smoke.success
+        percent = 0
+        withAnimation(.easeInOut(duration: 1)) {
+            percent = session.smoke.success
+        }
     }
 }
