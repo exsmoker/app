@@ -1,9 +1,11 @@
 import SwiftUI
+import Core
 
 struct Reasons: View {
     @EnvironmentObject var session: Session
     @Binding var tab: Int
     @State private var percent = Double()
+    @State private var top = [Reason.Rating]()
     
     var body: some View {
         ScrollView {
@@ -33,6 +35,9 @@ struct Reasons: View {
                     .padding(.horizontal)
                 Spacer()
             }
+            ForEach(top) {
+                Text(.init($0.reason.name))
+            }
         }.onChange(of: tab) {
             if $0 == 2 {
                 update()
@@ -45,5 +50,6 @@ struct Reasons: View {
         withAnimation(.easeInOut(duration: 1)) {
             percent = session.smoke.success
         }
+        top = session.smoke.top
     }
 }
