@@ -24,6 +24,15 @@ struct Reasons: View {
                 Spacer()
             }
             Ring(percent: $percent)
+            Spacer()
+                .frame(height: 20)
+            HStack {
+                Text("Popular.reasons")
+                    .font(Font.callout.bold())
+                    .foregroundColor(.init(.tertiaryLabel))
+                    .padding(.horizontal)
+                Spacer()
+            }
         }.onChange(of: tab) {
             if $0 == 2 {
                 update()
