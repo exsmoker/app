@@ -36,8 +36,10 @@ struct Reasons: View {
                 Spacer()
             }
             ForEach(top) {
-                Text(.init($0.reason.name))
+                Rating(rating: $0)
             }
+            Spacer()
+                .frame(height: 60)
         }.onChange(of: tab) {
             if $0 == 2 {
                 update()

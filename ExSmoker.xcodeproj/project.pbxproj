@@ -44,6 +44,7 @@
 		CE31F0A924F2B91C00AADA52 /* Control.Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F0A824F2B91C00AADA52 /* Control.Title.swift */; };
 		CE31F0AB24F2B95500AADA52 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F0AA24F2B95500AADA52 /* Control.swift */; };
 		CE423A94250127C6002BD07D /* Reasons.Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE423A93250127C6002BD07D /* Reasons.Ring.swift */; };
+		CE5219D0251A4DBE00A3E402 /* Reasons.Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5219CF251A4DBE00A3E402 /* Reasons.Rating.swift */; };
 		CE61839F24F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A024F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
 		CE6183A124F13B7400BDC132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE61839E24F13B7400BDC132 /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		CE31F0A824F2B91C00AADA52 /* Control.Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Title.swift; sourceTree = "<group>"; };
 		CE31F0AA24F2B95500AADA52 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		CE423A93250127C6002BD07D /* Reasons.Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reasons.Ring.swift; sourceTree = "<group>"; };
+		CE5219CF251A4DBE00A3E402 /* Reasons.Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reasons.Rating.swift; sourceTree = "<group>"; };
 		CE61839E24F13B7400BDC132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE779CE024F41B6E00CFE9BC /* Control.Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Circle.swift; sourceTree = "<group>"; };
 		CEA06E8124FA7504007F7BD6 /* Triggers.Reason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.Reason.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				CE25A8BF24F14EA9008488F6 /* Home.swift */,
 				CE0E6A7424F13967007A9072 /* Main.swift */,
 				CE31F09D24F27DB300AADA52 /* Onboard.swift */,
+				CE5219CF251A4DBE00A3E402 /* Reasons.Rating.swift */,
 				CE423A93250127C6002BD07D /* Reasons.Ring.swift */,
 				CE21514D24F563750033242B /* Reasons.swift */,
 				CE31F09B24F2615100AADA52 /* Settings.swift */,
@@ -451,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE31F0A924F2B91C00AADA52 /* Control.Title.swift in Sources */,
+				CE5219D0251A4DBE00A3E402 /* Reasons.Rating.swift in Sources */,
 				CE21514E24F563750033242B /* Reasons.swift in Sources */,
 				CE0A43D324F6B83E008FDD62 /* Triggers.Event.swift in Sources */,
 				CEA06E8224FA7504007F7BD6 /* Triggers.Reason.swift in Sources */,
