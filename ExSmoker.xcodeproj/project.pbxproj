@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00D7CA251B7F1700D2AA85 /* Trends.Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00D7C9251B7F1700D2AA85 /* Trends.Rating.swift */; };
 		CE0A43D124F6B794008FDD62 /* Triggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A43D024F6B794008FDD62 /* Triggers.swift */; };
 		CE0A43D324F6B83E008FDD62 /* Triggers.Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A43D224F6B83E008FDD62 /* Triggers.Event.swift */; };
 		CE0E6A7324F13967007A9072 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E6A7224F13967007A9072 /* App.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE00D7C9251B7F1700D2AA85 /* Trends.Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trends.Rating.swift; sourceTree = "<group>"; };
 		CE0A43D024F6B794008FDD62 /* Triggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.swift; sourceTree = "<group>"; };
 		CE0A43D224F6B83E008FDD62 /* Triggers.Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triggers.Event.swift; sourceTree = "<group>"; };
 		CE0E6A6F24F13967007A9072 /* ExSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 				CE31F09B24F2615100AADA52 /* Settings.swift */,
 				CE1F0A0124FBADA100B86F72 /* Stats.Chart.swift */,
 				CE21514B24F5636B0033242B /* Stats.swift */,
+				CE00D7C9251B7F1700D2AA85 /* Trends.Rating.swift */,
 				CE21514F24F5641D0033242B /* Trends.swift */,
 				CEB58F4B24F91CE400F28720 /* Triggers.Craving.swift */,
 				CE0A43D224F6B83E008FDD62 /* Triggers.Event.swift */,
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE00D7CA251B7F1700D2AA85 /* Trends.Rating.swift in Sources */,
 				CE31F0A924F2B91C00AADA52 /* Control.Title.swift in Sources */,
 				CE5219D0251A4DBE00A3E402 /* Reasons.Rating.swift in Sources */,
 				CE21514E24F563750033242B /* Reasons.swift in Sources */,

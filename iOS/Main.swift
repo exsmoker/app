@@ -18,7 +18,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                 }.tag(2)
-            Trends()
+            Trends(tab: $selected)
                 .tabItem {
                     Image(systemName: "star.fill")
                 }.tag(3)

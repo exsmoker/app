@@ -40,7 +40,12 @@ struct Reasons: View {
             }
             Spacer()
                 .frame(height: 60)
-        }.onChange(of: tab) {
+        }.onAppear {
+            if tab == 2 {
+                update()
+            }
+        }
+        .onChange(of: tab) {
             if $0 == 2 {
                 update()
             }
@@ -51,7 +56,7 @@ struct Reasons: View {
         percent = 0
         withAnimation(.easeInOut(duration: 1)) {
             percent = session.smoke.success
+            top = session.smoke.top
         }
-        top = session.smoke.top
     }
 }

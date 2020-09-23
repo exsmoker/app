@@ -36,6 +36,7 @@ General = "General";
 Timeline = "Timeline";
 Interesting.rate = "Interesting rate";
 Popular.reasons = "Most popular reasons";
+Most.triggers = "Most common triggers";
 Range.title.hours = "Hours";
 Range.title.days = "Days";
 Range.title.weeks = "Weeks";

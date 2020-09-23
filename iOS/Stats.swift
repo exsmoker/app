@@ -54,7 +54,9 @@ struct Stats: View {
             Spacer()
                 .frame(height: 60)
         }.onAppear {
-            update(range)
+            if tab == 1 {
+                update(range)
+            }
         }.onChange(of: tab) {
             if $0 == 1 {
                 update(range)
@@ -63,14 +65,14 @@ struct Stats: View {
     }
     
     private func update(_ range: Smoke.Range) {
-        withAnimation(.easeInOut) {
-            cigarettes = session.smoke.cigarettes(range).map { .init($0) }
-            cravings = session.smoke.cravings(range).map { .init($0) }
-        }
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = session.user.currency.symbol
-        savings = formatter.string(from: .init(value: session.smoke.savings(session.user)))!
+        withAnimation(.easeInOut(duration: 1)) {
+            cigarettes = session.smoke.cigarettes(range).map { .init($0) }
+            cravings = session.smoke.cravings(range).map { .init($0) }
+            savings = formatter.string(from: .init(value: session.smoke.savings(session.user)))!
+        }
     }
 }
 

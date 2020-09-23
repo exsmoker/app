@@ -117,7 +117,9 @@ struct Home: View {
                     .frame(height: 80)
             }
         }.onAppear {
-            update()
+            if tab == 0 {
+                update()
+            }
         }.onChange(of: tab) {
             if $0 == 0 {
                 update()
