@@ -5,32 +5,27 @@ struct Settings: View {
     
     var body: some View {
         ScrollView {
-            Profile()
-        }
-    }
-}
-
-private struct Profile: View {
-    @EnvironmentObject var session: Session
-    
-    var body: some View {
-        VStack {
+            Spacer()
+                .frame(height: 30)
             ZStack {
-                Circle()
-                    .frame(width: 120, height: 120)
-                    .foregroundColor(.init(.secondarySystemBackground))
-                    .shadow(color: .init(.tertiaryLabel), radius: 16, x: 0, y: 0)
-                    .padding()
-                Image(systemName: "person.fill")
-                    .font(.largeTitle)
-                    .foregroundColor(.accentColor)
-            }.padding(.top, 50)
-            Text(verbatim: session.user.name)
-                .bold()
-                .padding(.top)
-            Text(verbatim: session.user.location)
-                .font(.footnote)
-                .foregroundColor(.secondary)
+                HStack {
+                    Spacer()
+                    Control.Icon(image: "cart.fill", color: .accentColor) {
+                        
+                    }.padding()
+                }
+                if !session.user.premium {
+                    Premium()
+                } else {
+                    Free()
+                }
+            }
+            
+            Profile()
+            Control.Icon(image: "dial.min.fill", color: .accentColor) {
+                
+            }.padding()
+            
         }
     }
 }
