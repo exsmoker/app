@@ -37,6 +37,7 @@ Timeline = "Timeline";
 Interesting.rate = "Interesting rate";
 Popular.reasons = "Most popular reasons";
 Most.triggers = "Most common triggers";
+Why = "Why?";
 Range.title.hours = "Hours";
 Range.title.days = "Days";
 Range.title.weeks = "Weeks";
@@ -59,6 +60,7 @@ Trigger.title.lonely = "Lonely";
 Trigger.title.scared = "Scared";
 Trigger.title.sad = "Sad";
 Trigger.title.ate = "Just ate";
+Trigger.title.social = "Public anxiety";
 
 "Greet.morning %@" = "Good morning, %@";
 "Greet.noon %@" = "Good day, %@";

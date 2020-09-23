@@ -15,10 +15,10 @@ extension Control {
                         .frame(width: 50, height: 50)
                         .shadow(color: color, radius: 2, x: -1, y: -1)
                         .shadow(color: color, radius: 6, x: 3, y: 3)
-                        .foregroundColor(pressed ? color : .init(.systemBackground))
+                        .foregroundColor(pressed ? .init(.systemBackground) : color)
                     Image(systemName: image)
                         .font(.headline)
-                        .foregroundColor(pressed ? .init(.systemBackground) : color)
+                        .foregroundColor(pressed ? color : .init(.systemBackground))
                 }.frame(width: 60, height: 60)
             })
         }

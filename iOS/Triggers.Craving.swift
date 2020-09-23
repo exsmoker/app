@@ -37,13 +37,13 @@ extension Triggers {
                         ForEach(reasons, id: \.self) { item in
                             HStack {
                                 Spacer()
-                                Item(reason: item.first!, width: geo.size.width / 2.4) {
+                                Option(reason: item.first!, width: geo.size.width / 2.4) {
                                     session.craving(.init(item.first!, visible!))
                                     reason = item.first
                                 }
                                 Spacer()
                                 if item.count == 2 {
-                                    Item(reason: item.last!, width: geo.size.width / 2.4) {
+                                    Option(reason: item.last!, width: geo.size.width / 2.4) {
                                         session.craving(.init(item.last!, visible!))
                                         reason = item.last
                                     }
@@ -84,42 +84,5 @@ extension Triggers {
                 }
             }.navigationViewStyle(StackNavigationViewStyle())
         }
-    }
-}
-
-private struct Item: View {
-    let reason: Core.Reason
-    let width: CGFloat
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.init(.secondarySystemBackground))
-                    .shadow(color: .init(.quaternaryLabel), radius: 5, x: 1, y: 1)
-                VStack {
-                    Image(reason.image)
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .padding(.bottom)
-                    HStack {
-                        Text(.init(reason.category.name))
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                            .padding(.leading)
-                        Spacer()
-                    }
-                    HStack {
-                        Text(.init(reason.name))
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                            .padding(.leading)
-                        Spacer()
-                    }
-                }
-            }.frame(width: width, height: 180)
-        }.accentColor(.clear)
     }
 }

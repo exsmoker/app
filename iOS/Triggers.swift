@@ -12,15 +12,18 @@ struct Triggers: View {
         NavigationView {
             GeometryReader { geo in
                 ScrollView {
+                    Text("Why")
+                        .bold()
+                        .foregroundColor(.secondary)
+                        .padding()
                     ForEach(triggers, id: \.self) { item in
                         HStack {
-                            Spacer()
                             Item(trigger: item.first!) {
                                 if event == .smoked {
                                     session.smoked(.init(item.first!))
                                 }
                                 trigger = item.first!
-                            }
+                            }.padding(.leading)
                             Spacer()
                                 .frame(width: 14)
                             if item.count == 2 {
@@ -29,8 +32,7 @@ struct Triggers: View {
                                         session.smoked(.init(item.last!))
                                     }
                                     trigger = item.last!
-                                }
-                                Spacer()
+                                }.padding(.trailing)
                             } else {
                                 Spacer()
                                     .frame(height: 20)
@@ -68,26 +70,5 @@ struct Triggers: View {
                 }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-private struct Item: View {
-    let trigger: Smoke.Trigger
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            ZStack {
-                GeometryReader {
-                    RoundedRectangle(cornerRadius: $0.size.height / 3)
-                        .shadow(color: .accentColor, radius: 2, x: -0.5, y: -0.5)
-                        .shadow(color: .accentColor, radius: 2, x: 1, y: 1)
-                }
-                Text(.init(trigger.title))
-                    .foregroundColor(.primary)
-                    .font(Font.footnote.bold())
-                    .padding()
-            }
-        }.accentColor(.pink)
     }
 }
