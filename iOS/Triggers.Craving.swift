@@ -29,7 +29,7 @@ extension Triggers {
                         Spacer()
                             .frame(height: 30)
                         Control.Title(title: "Gime.me.any", background: .accentColor, width: 200) {
-                            session.craving(.init(reasons.last!.last))
+                            session.craving(.init(reasons.last!.last, visible!))
                             reason = reasons.last!.last
                         }
                         Spacer()
@@ -38,13 +38,13 @@ extension Triggers {
                             HStack {
                                 Spacer()
                                 Item(reason: item.first!, width: geo.size.width / 2.4) {
-                                    session.craving(.init(item.first!))
+                                    session.craving(.init(item.first!, visible!))
                                     reason = item.first
                                 }
                                 Spacer()
                                 if item.count == 2 {
                                     Item(reason: item.last!, width: geo.size.width / 2.4) {
-                                        session.craving(.init(item.last!))
+                                        session.craving(.init(item.last!, visible!))
                                         reason = item.last
                                     }
                                     Spacer()
@@ -55,7 +55,7 @@ extension Triggers {
                 }.navigationBarItems(trailing:
                                         Button(action: {
                                             if cancelable {
-                                                session.craving(.init(nil))
+                                                session.craving(.init(nil, visible!))
                                                 visible = nil
                                             }
                                         }) {
