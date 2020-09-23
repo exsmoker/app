@@ -58,6 +58,7 @@
 		CEC8FDA7251B943500DF598A /* Control.Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8FDA6251B943500DF598A /* Control.Icon.swift */; };
 		CEFC9110251B99340005E684 /* Settings.Free.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC910F251B99340005E684 /* Settings.Free.swift */; };
 		CEFC9116251B9B0D0005E684 /* Settings.Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC9115251B9B0D0005E684 /* Settings.Premium.swift */; };
+		CEFC9120251B9D170005E684 /* Settings.Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC911F251B9D170005E684 /* Settings.Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +122,7 @@
 		CEC8FDA6251B943500DF598A /* Control.Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.Icon.swift; sourceTree = "<group>"; };
 		CEFC910F251B99340005E684 /* Settings.Free.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.Free.swift; sourceTree = "<group>"; };
 		CEFC9115251B9B0D0005E684 /* Settings.Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.Premium.swift; sourceTree = "<group>"; };
+		CEFC911F251B9D170005E684 /* Settings.Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				CE423A93250127C6002BD07D /* Reasons.Ring.swift */,
 				CE21514D24F563750033242B /* Reasons.swift */,
 				CEFC910F251B99340005E684 /* Settings.Free.swift */,
+				CEFC911F251B9D170005E684 /* Settings.Item.swift */,
 				CEFC9115251B9B0D0005E684 /* Settings.Premium.swift */,
 				CE3F4859251B905A00126A29 /* Settings.Profile.swift */,
 				CE31F09B24F2615100AADA52 /* Settings.swift */,
@@ -452,6 +455,7 @@
 				CE21515024F5641D0033242B /* Trends.swift in Sources */,
 				CE423A94250127C6002BD07D /* Reasons.Ring.swift in Sources */,
 				CE21514C24F5636B0033242B /* Stats.swift in Sources */,
+				CEFC9120251B9D170005E684 /* Settings.Item.swift in Sources */,
 				CEC8FDA7251B943500DF598A /* Control.Icon.swift in Sources */,
 				CE0E6A7524F13967007A9072 /* Main.swift in Sources */,
 				CE779CE124F41B6E00CFE9BC /* Control.Circle.swift in Sources */,

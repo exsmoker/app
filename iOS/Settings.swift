@@ -20,12 +20,13 @@ struct Settings: View {
                     Free()
                 }
             }
-            
             Profile()
             Control.Icon(image: "dial.min.fill", color: .accentColor) {
                 
             }.padding()
-            
+            Item(title: "Currency", value: "$") {
+                
+            }
         }
     }
 }

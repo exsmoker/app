@@ -35,8 +35,16 @@ struct Reasons: View {
                     .padding(.horizontal)
                 Spacer()
             }
-            ForEach(top) {
-                Rating(rating: $0)
+            if top.isEmpty {
+                Spacer()
+                    .frame(height: 60)
+                Text("Not.enough")
+                    .foregroundColor(.secondary)
+                    .padding()
+            } else {
+                ForEach(top) {
+                    Rating(rating: $0)
+                }
             }
             Spacer()
                 .frame(height: 60)

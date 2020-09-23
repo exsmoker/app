@@ -24,8 +24,16 @@ struct Trends: View {
                     .padding(.horizontal)
                 Spacer()
             }
-            ForEach(trends) { item in
-                Rating(index: trends.firstIndex { $0.id == item.id }!, trend: item)
+            if trends.isEmpty {
+                Spacer()
+                    .frame(height: 60)
+                Text("Not.enough")
+                    .foregroundColor(.secondary)
+                    .padding()
+            } else {
+                ForEach(trends) { item in
+                    Rating(index: trends.firstIndex { $0.id == item.id }!, trend: item)
+                }
             }
             Spacer()
                 .frame(height: 60)

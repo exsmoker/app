@@ -40,6 +40,7 @@ Most.triggers = "Most common triggers";
 Why = "Why?";
 Free.user = "Free user";
 Premium.user = "Premium user";
+Not.enough = "Not enough data yet,\ncome back soon";
 Range.title.hours = "Hours";
 Range.title.days = "Days";
 Range.title.weeks = "Weeks";
