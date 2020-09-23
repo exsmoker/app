@@ -24,8 +24,8 @@ struct Trends: View {
                     .padding(.horizontal)
                 Spacer()
             }
-            ForEach(trends) {
-                Rating(trend: $0)
+            ForEach(trends) { item in
+                Rating(index: trends.firstIndex { $0.id == item.id }!, trend: item)
             }
             Spacer()
                 .frame(height: 60)
