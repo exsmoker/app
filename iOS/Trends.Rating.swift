@@ -22,11 +22,9 @@ extension Trends {
                     Text(verbatim: "\(Int(trend.percent * 100))")
                         .font(Font.title.bold())
                         .foregroundColor(.accentColor)
-                        .animation(.none)
                     Text(verbatim: "%")
                         .foregroundColor(.accentColor)
                         .font(.footnote)
-                        .animation(.none)
                         .offset(x: -4)
                         .padding(.trailing)
                 }

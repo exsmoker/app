@@ -14,7 +14,7 @@ struct Settings: View {
                         
                     }.padding()
                 }
-                if !session.user.premium {
+                if session.user.premium {
                     Premium()
                 } else {
                     Free()
