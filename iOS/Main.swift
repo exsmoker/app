@@ -22,7 +22,7 @@ struct Main: View {
                 .tabItem {
                     Image(systemName: "star.fill")
                 }.tag(3)
-            Settings()
+            Settings(tab: $selected)
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                 }.tag(4)
